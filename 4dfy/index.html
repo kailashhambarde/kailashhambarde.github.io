@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>4D-fy: Text-to-4D Generation Using Hybrid Score Distillation Sampling</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="data/assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="data/assets/css/styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="data/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="robots" content="noindex">
+
+    <meta property="og:site_name" content="4D-fy" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="4D-fy: Text-to-4D Generation Using Hybrid Score Distillation Sampling" />
+    <meta property="og:description" content="4D-fy: Text-to-4D Generation Using Hybrid Score Distillation Sampling." />
+    <meta property="og:url" content="" />
+
+</head>
+
+<body>
+    <div class="highlight-clean" style="padding-bottom: 0px; padding-top: 20px;">
+        <div class="container" style="max-width: 1024px; margin-bottom: 20px">
+            <h1 class="text-center" style="font-size:35px;"><b>4D-fy</b>: Text-to-4D Generation Using Hybrid Score Distillation Sampling</h1>
+        </div>
+        <div class="container" style="max-width: 1024px; margin-bottom: 20px;">
+            <div class="authors">
+                <a href=https://sherwinbahmani.github.io/>
+                    Sherwin Bahmani<sup>1,2</sup>
+                </a>&nbsp;
+                <a href=https://universome.github.io/>
+                Ivan Skorokhodov<sup>3,4</sup>
+                </a>&nbsp;
+                <a href=https://www.lessvrong.com/>
+                Victor Rong<sup>1,2</sup>
+                </a>&nbsp;
+                <a href=https://web.stanford.edu/~gordonwz/>
+                Gordon Wetzstein<sup>5</sup>
+                </a>&nbsp;
+                <a href=https://geometry.stanford.edu/member/guibas/>
+                Leonidas Guibas<sup>5</sup>&nbsp;
+                </a>
+                <br>
+            </div>
+            <div class="authors">
+                <a href=https://peterwonka.net/>
+                Peter Wonka<sup>3</sup>
+                </a>&nbsp;
+                <a href=http://www.stulyakov.com/>
+                Sergey Tulyakov<sup>4</sup>
+                </a>&nbsp;
+                <a href=https://jjparkcv.github.io/>
+                Jeong Joon Park<sup>6</sup>
+                </a>&nbsp;
+                <a href=https://taiya.github.io/>
+                Andrea Tagliasacchi<sup>1,7,8</sup>
+                </a>&nbsp;
+                <a href=https://davidlindell.com/>
+                David B. Lindell<sup>1,2</sup>
+                </a>&nbsp;     
+            </div>
+            <div class="affiliations">
+                <span><sup>1</sup> University of Toronto </span>
+                <span><sup>2</sup> Vector Institute </span>
+                <span><sup>3</sup> KAUST </span>
+                <span><sup>4</sup> Snap Inc. </span>
+                <span><sup>5</sup> Stanford University </span>
+                <span><sup>6</sup> University of Michigan </span>
+                <span><sup>7</sup> SFU </span>
+                <span><sup>8</sup> Google </span>
+            </div>
+        </div>
+        <div id="container">
+        <div class="buttons" style="margin-top: 8px; margin-bottom: 8px;">
+            <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2311.17984">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"></path>
+                </svg>Paper
+            </a>
+            <a class="btn btn-light" role="button" href="https://github.com/sherwinbahmani/4dfy">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 
+                            1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 
+                            3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 
+                            2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+                Code
+            </a>
+            <a class="btn btn-light" role="button" href="gallery.html">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" width="24px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
+                </svg>
+                Gallery
+            </a>
+        </div>
+        </div>
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="compositional captioned_videos">
+            <video class="video lazy" autoplay loop playsinline muted>
+                <source data-src="data/videos/teaser.mp4" type="video/mp4"></source>
+            </video>
+        </div>
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Abstract</h2>
+                    </div>
+                </div>
+                <p>
+                    Recent breakthroughs in text-to-4D generation rely on pre-trained text-to-image and text-to-video models to generate dynamic 3D scenes. However, current text-to-4D methods face a three-way tradeoff between the quality of scene appearance, 3D structure, and motion. For example, text-to-image models and their 3D-aware variants are trained on internet-scale image datasets and can be used to produce scenes with realistic appearance and 3D structure-but no motion. Text-to-video models are trained on relatively smaller video datasets and can produce scenes with motion, but poorer appearance and 3D structure. While these models have complementary strengths, they also have opposing weaknesses, making it difficult to combine them in a way that alleviates this three-way tradeoff. Here, we introduce hybrid score distillation sampling, an alternating optimization procedure that blends supervision signals from multiple pre-trained diffusion models and incorporates benefits of each for high-fidelity text-to-4D generation. Using hybrid SDS, we demonstrate synthesis of 4D scenes with compelling appearance, 3D structure, and motion.
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Method</h2>
+            </div>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-md-12">
+                <p>
+                    A 4D radiance field is parameterized using a neural representation with a static and dynamic multiscale hash table of features. Images and videos are rendered from the representation using volume rendering, and we supervise the representation using hybrid score distillation sampling-a technique that combines gradients from multiple types of pre-trained diffusion models. In the first stage of training we use gradients from a 3D-aware text-to-image model (3D-T2I) to iteratively optimize a representation without the Janus problem. Next, we blend in gradient supervision using variational SDS with a text-to-image model (T2I) to improve the appearance (i.e., we alternate supervision between 3D and image models). In the last stage we incorporate gradients from a text-to-video model (T2V) to add motion to the scene, and we update the scene using the other models in an alternating fashion.
+                </p>
+                &nbsp;
+                <img src="data/method.png" alt="architecture" style="width: 100%">
+            </div>
+        </div>
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>4D Generation</h2>
+            </div>
+        </div>
+        <div class="row captioned_videos">
+        <div class="col-6">
+            <div class="video-compare-container" style="width: 100%">
+                <video class="video lazy" id="ex0" loop playsinline autoPlay muted src="data/videos/ours/a_bear_driving_a_car.mp4" onplay="resizeAndPlay(this)"></video>
+            </div>
+            <h6 class="caption">a bear driving a car</h6>
+        </div>
+        <div class="col-6">
+            <div class="video-compare-container" style="width: 100%">
+                <video class="video lazy" id="ex1" loop playsinline autoPlay muted src="data/videos/ours/a_crocodile_playing_a_drum_set.mp4" onplay="resizeAndPlay(this)"></video>
+            </div>
+            <h6 class="caption">a crocodile playing a drum set</h6>
+        </div>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex2" loop playsinline autoPlay muted src="data/videos/ours/a_building_on_fire.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+                <h6 class="caption">a building on fire</h6>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex3" loop playsinline autoPlay muted src="data/videos/ours/water_spraying_out_of_a_firehydrant.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+                <h6 class="caption">water spraying out of a firehydrant</h6>
+            </div>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex4" loop playsinline autoPlay muted src="data/videos/ours/a_lightning_hitting_a_building.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+                <h6 class="caption">a lightning hitting a building</h6>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex5" loop playsinline autoPlay muted src="data/videos/ours/unicorn_running.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+                <h6 class="caption">unicorn running</h6>
+            </div>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex6" loop playsinline autoPlay muted src="data/videos/ours/a_steam_engine_train_is_emitting_steam_into_the_air.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+                <h6 class="caption">a steam engine train is emitting steam into the air</h6>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex7" loop playsinline autoPlay muted src="data/videos/ours/a_space_shuttle_launching.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+                <h6 class="caption">a space shuttle launching</h6>
+            </div>
+        </div>
+        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+            <a href="gallery.html" class="btn btn-primary btn-lg btn-search">
+                Additional Results
+            </a>
+        </div>
+    </div>
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Comparisons with Make-A-Video3D (Singer et al. 2023)</h2>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-xs-2 compare-title  compare-title-sm">
+                <p>Make-A-Video3D</p>
+            </div>
+            <div class="col-xs-2 compare-title">
+                <p>Ours</p>
+            </div>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d2" loop playsinline autoPlay muted src="data/videos/mav3d/a_silver_humanoid_robot_flipping_a_coin.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d3" loop playsinline autoPlay muted src="data/videos/ours/a_silver_humanoid_robot_flipping_a_coin.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <h6 class="caption">a silver humanoid robot flipping a coin</h6>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d6" loop playsinline autoPlay muted src="data/videos/mav3d/3D_rendering_of_a_fox_playing_videogame.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d7" loop playsinline autoPlay muted src="data/videos/ours/3D_rendering_of_a_fox_playing_videogame.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <h6 class="caption">3D rendering of a fox playing videogame</h6>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d8" loop playsinline autoPlay muted src="data/videos/mav3d/an_emoji_of_a_baby_panda_reading_a_book.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d9" loop playsinline autoPlay muted src="data/videos/ours/an_emoji_of_a_baby_panda_reading_a_book.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <h6 class="caption">an emoji of a baby panda reading a book</h6>
+        </div>
+    </div>
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Citation</h2>
+                <code>
+                    @article{bah20234dfy,<br>
+                    &nbsp; author = {Bahmani, Sherwin and Skorokhodov, Ivan and Rong, Victor and Wetzstein, Gordon and Guibas, Leonidas and Wonka, Peter and Tulyakov, Sergey and Park, Jeong Joon and Tagliasacchi, Andrea and Lindell, David B.},<br>
+                    &nbsp; title  = {4D-fy: Text-to-4D Generation Using Hybrid Score Distillation Sampling},<br>
+                    &nbsp; journal = {arXiv},<br>
+                    &nbsp; year   = {2023},<br>
+                }</code></div>
+        </div>
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <footer>
+            <p> Website template from <a href="https://dreamfusion3d.github.io/">DreamFusion</a> and <a href="https://mv-dream.github.io/">MVDream</a> . We thank the authors for the open-source code.</p>
+        </footer>
+    </div>
+    <script src="data/assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+</body>
+
+</html>
