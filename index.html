@@ -40,7 +40,7 @@
                     <a href="https://scholar.google.com/citations?user=W0gfv-UAAAAJ&hl=en">Google Scholar</a>
                     &nbsp/&nbsp
                     <a href="https://twitter.com/kailas_srt">Twitter</a> &nbsp/&nbsp
-                    <a href="https://github.com/kailaspanu/">Github</a>
+                    <a href="https://github.com/kailashhambarde">Github</a>
                   </p>
                 </td>
                 <td style="padding:2.5%;width:15%;max-width:15%">
@@ -173,6 +173,15 @@
       </tr>
   </table>
 </body>
+<script>
+  function increaseVisitCount() {
+    var count = localStorage.getItem('visitCount') || 0;
+    count++;
+    localStorage.setItem('visitCount', count);
+    document.getElementById('visitCount').innerText = 'Page visits since launch: ' + count;
+  }
+  window.onload = increaseVisitCount;
+</script>
 
 
 </html>
