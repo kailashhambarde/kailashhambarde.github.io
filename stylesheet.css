@@ -129,3 +129,33 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+
+a {
+  color: #672bff;
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+a:hover {
+  color: #ff416c;
+}
+
+heading {
+  color: #333;
+  font-size: 1.5em;
+}
+
+.fixed-table {
+  position: fixed;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  border-radius: 10%;
+  box-shadow: #333;
+
+}
+
+@media screen and (max-width: 600px) {
+  .fixed-table {
+    position: static; /* or adjust top and left values for small screens */
+  }
+}
