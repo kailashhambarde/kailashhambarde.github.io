@@ -159,3 +159,15 @@ heading {
     position: static; /* or adjust top and left values for small screens */
   }
 }
+
+
+b {
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+
+b i {
+  margin-right: 5px;
+  color: #5a5a5a; /* Replace with your preferred color */
+}
