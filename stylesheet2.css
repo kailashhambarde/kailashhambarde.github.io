@@ -199,62 +199,48 @@ body {
     padding: 10px 0;
 }
 
-
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .header {
-        position: fixed; /* Fixed header on smaller screens */
+        position: fixed;
+        height: 200px; /* Adjust as per your header's height */
     }
 
     .menu {
         flex-direction: column;
+        top: 60px; /* Adjust to be right below the header */
     }
 
     .menu ul {
         flex-direction: column;
         align-items: center;
-    }
-
-    .menu ul li {
-        margin: 10px 0;
-    }
-
-    .main-content{
-        margin-top: 55%;
-    }
-
-    .profile-image img {
-        width: 80px;
-    }
-
-    .burger-menu {
-        margin-top: 10%;
-        display: block;
-        cursor: pointer;
-        color: rgb(255, 255, 255); /* Change the color to make it visible */
-        font-size: 24px; /* Adjust the size as needed */
-        padding: 5px;
-        align-items:flex-end;
-    }
-
-    .menu ul {
         display: none;
-        flex-direction: column;
-        align-items: start;
     }
 
     .menu.active ul {
         display: flex;
     }
 
-    /* Adjustments for responsive design */
-    .menu {
-        top: 100px; /* Adjust this based on your responsive header height */
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+        z-index: 1001; /* Ensure it's above other elements */
     }
-}
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    .main-content {
+        margin-top: 120px; /* Adjust based on header and menu size */
+    }
+
+    .profile-image img {
+        width: 80px;
+    }
+
+    /* Section adjustments for fixed header overlap */
+    section {
+        padding-top: 60px; /* Add padding to account for fixed header overlap */
+        margin-top: -60px; /* Negative margin to offset the padding for anchor links */
+    }
 }
