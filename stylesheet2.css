@@ -232,7 +232,7 @@ body {
 
     .menu {
         position: static; /* Align menu within header */
-        margin-top: 2vh; /* Adjust margin */
+        margin-top: 10vh; /* Adjust margin */
         background: transparent; /* Optional: make background transparent */
     }
 
