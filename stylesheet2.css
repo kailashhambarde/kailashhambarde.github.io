@@ -208,7 +208,7 @@ body {
 
     .menu {
         flex-direction: column;
-        top: 60px; /* Adjust to be right below the header */
+        top: 260px; /* Adjust to be right below the header */
     }
 
     .menu ul {
