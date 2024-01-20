@@ -1,0 +1,260 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 25%; /* Specify the height of the header */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.profile-image img {
+    max-width: 150px; /* Adjust the width as needed */
+    max-height: 150px; /* Adjust the height as needed */
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+
+.profileLinks{
+    text-align: center;
+
+
+}
+
+/* Navigation Menu */
+.menu {
+    position: fixed;
+    top: 60px; /* Set top equal to the height of the header */
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #6a3093, #a044ff); /* Modern gradient */
+    padding: 10px;
+    margin-top: 11.5%;
+
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin: 0 10px;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #ff6e7f;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.menu ul a:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+.main-content{
+    margin-top: 25%;
+}
+/* Main Content */
+.main-content .section {
+    display: flex;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+#publications-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styling for the h2 */
+#publications-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the publication container */
+.publication {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling for publication items */
+.publication-item {
+    width: 48%;
+    display: flex;
+    margin-bottom: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the image */
+.image {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+}
+
+/* Styling for the information */
+.info {
+    flex: 2;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Styling for links */
+.info a {
+    color: #ff6e7f;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.info a:hover {
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    .publication-item {
+        width: 100%;
+    }
+}
+
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        position: fixed; /* Fixed header on smaller screens */
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .main-content{
+        margin-top: 55%;
+    }
+
+    .profile-image img {
+        width: 80px;
+    }
+
+    .burger-menu {
+        margin-top: 10%;
+        display: block;
+        cursor: pointer;
+        color: rgb(255, 255, 255); /* Change the color to make it visible */
+        font-size: 24px; /* Adjust the size as needed */
+        padding: 5px;
+        align-items:flex-end;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .menu.active ul {
+        display: flex;
+    }
+
+    /* Adjustments for responsive design */
+    .menu {
+        top: 100px; /* Adjust this based on your responsive header height */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

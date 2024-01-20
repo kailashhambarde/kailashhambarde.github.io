@@ -171,3 +171,62 @@ b i {
   margin-right: 5px;
   color: #5a5a5a; /* Replace with your preferred color */
 }
+
+/* Menu Styling */
+.menu {
+  text-align: center; /* Center menu */
+  margin-left: -20%;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex; /* Use inline-flex to center the list */
+  justify-content: center; /* Center flex items */
+}
+
+.menu ul li {
+  margin: 0 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333; /* Default color */
+  background-color: #f2f2f2; /* Background color */
+  padding: 10px 15px; /* Padding for capsule shape */
+  border-radius: 50px; /* Rounded edges for capsule shape */
+  transition: background-color 0.3s, color 0.3s; /* Transition for color and background */
+}
+
+/* Hover Effect */
+.menu ul li a:hover {
+  background-color: #4CAF50; /* Change as needed */
+  color: #fff; /* Text color on hover */
+}
+
+/* Toggle Button Styling */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Show toggle button on small screens */
+  }
+
+  .menu ul {
+      display: none; /* Hide menu on small screens */
+      flex-direction: column;
+  }
+
+  .menu ul li {
+      margin: 5px 0;
+  }
+
+  .menu-active {
+      display: block; /* Show menu when active */
+  }
+}
