@@ -237,7 +237,7 @@ body {
 
     .menu {
         flex-direction: column;
-        top: 100px; /* Adjusted to align properly below the header */
+        top: 300px; /* Adjusted to align properly below the header */
         width: 100%; /* Ensure full width */
         z-index: 1002; /* Ensure it's above the header */
     }
