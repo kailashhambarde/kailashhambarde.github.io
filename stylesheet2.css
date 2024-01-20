@@ -270,6 +270,24 @@ body {
         padding-top: 60px; /* Add padding to account for fixed header overlap */
         margin-top: -60px; /* Negative margin to offset the padding for anchor links */
     }
+
+    
 }
 
 
+/* Additional breakpoint for smaller devices */
+@media screen and (max-width: 480px) {
+    .profile h1 {
+        font-size: 6vw; /* Slightly larger font size for very small screens */
+    }
+
+    .profile p, .profileLinks p, .profileLinks a {
+        font-size: 4vw; /* Adjusted font size for smaller screens */
+    }
+
+    .main-content {
+        margin-top: 25vh; /* Increased top margin for smaller devices */
+    }
+
+    /* Further adjustments for smaller devices as needed */
+}
