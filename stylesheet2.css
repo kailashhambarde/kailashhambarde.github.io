@@ -248,6 +248,7 @@ body {
     }
 
     .burger-menu {
+        margin-top: 10vh; /* Adjust margin */
         display: block;
         cursor: pointer;
         color: rgb(18, 1, 1);
