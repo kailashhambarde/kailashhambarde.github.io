@@ -203,12 +203,39 @@ body {
 @media screen and (max-width: 768px) {
     .header {
         position: fixed;
-        height: 200px; /* Adjust as per your header's height */
+        padding: 10px 0; /* Reduced padding for smaller header */
+    }
+
+    .header-content {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center-align the content */
+        text-align: center; /* Center-align the text */
+    }
+
+    .profile-image img {
+        max-width: 80px; /* Smaller profile image */
+        max-height: 80px; /* Maintain aspect ratio */
+    }
+
+    .profile h1 {
+        font-size: 20px; /* Smaller font size for name */
+    }
+
+    .profile p {
+        font-size: 14px; /* Smaller font size for description */
+    }
+
+    .profileLinks p {
+        font-size: 14px; /* Smaller font size for links */
+    }
+
+    .profileLinks a {
+        margin: 5px; /* Reduced margin for links */
     }
 
     .menu {
         flex-direction: column;
-        top: 260px; /* Adjust to be right below the header */
+        top: 180px; /* Adjust to be right below the header */
     }
 
     .menu ul {
@@ -231,7 +258,7 @@ body {
     }
 
     .main-content {
-        margin-top: 120px; /* Adjust based on header and menu size */
+        margin-top: 300px; /* Adjust based on header and menu size */
     }
 
     .profile-image img {
