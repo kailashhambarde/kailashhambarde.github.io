@@ -199,11 +199,13 @@ body {
     padding: 10px 0;
 }
 
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .header {
         position: fixed;
         padding: 10px 0; /* Reduced padding for smaller header */
+        height: auto; /* Adjusted for flexible height */
     }
 
     .header-content {
@@ -235,7 +237,9 @@ body {
 
     .menu {
         flex-direction: column;
-        top: 180px; /* Adjust to be right below the header */
+        top: 100px; /* Adjusted to align properly below the header */
+        width: 100%; /* Ensure full width */
+        z-index: 1002; /* Ensure it's above the header */
     }
 
     .menu ul {
@@ -254,15 +258,10 @@ body {
         color: white;
         font-size: 24px;
         padding: 10px;
-        z-index: 1001; /* Ensure it's above other elements */
     }
 
     .main-content {
-        margin-top: 300px; /* Adjust based on header and menu size */
-    }
-
-    .profile-image img {
-        width: 80px;
+        margin-top: 200px; /* Adjusted based on header and menu size */
     }
 
     /* Section adjustments for fixed header overlap */
@@ -270,24 +269,4 @@ body {
         padding-top: 60px; /* Add padding to account for fixed header overlap */
         margin-top: -60px; /* Negative margin to offset the padding for anchor links */
     }
-
-    
-}
-
-
-/* Additional breakpoint for smaller devices */
-@media screen and (max-width: 480px) {
-    .profile h1 {
-        font-size: 6vw; /* Slightly larger font size for very small screens */
-    }
-
-    .profile p, .profileLinks p, .profileLinks a {
-        font-size: 4vw; /* Adjusted font size for smaller screens */
-    }
-
-    .main-content {
-        margin-top: 25vh; /* Increased top margin for smaller devices */
-    }
-
-    /* Further adjustments for smaller devices as needed */
 }
