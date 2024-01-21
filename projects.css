@@ -26,10 +26,11 @@ body {
 }
 
 .project-gif {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    max-width: 100%; /* Adjust this value as needed to decrease width */
+    max-height: 600px; /* Set a maximum height */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below the GIF */
 }
 
 .project-details article {
