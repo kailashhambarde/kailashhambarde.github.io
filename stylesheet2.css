@@ -60,7 +60,7 @@ body {
 /* Navigation Menu */
 .menu {
     position: fixed;
-    top: 60px; /* Set top equal to the height of the header */
+    top: 50px; /* Set top equal to the height of the header */
     left: 0;
     right: 0;
     z-index: 999;
@@ -100,6 +100,9 @@ body {
 
 .main-content{
     margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+
 }
 /* Main Content */
 .main-content .section {
@@ -129,6 +132,8 @@ body {
     font-size: 24px;
     margin-bottom: 20px;
 }
+
+
 
 /* Styling for the publication container */
 .publication {
@@ -199,7 +204,44 @@ body {
     padding: 10px 0;
 }
 
+#about {
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center-align items horizontally */
+    justify-content: center; /* Center-align items vertically */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-left: auto; /* Center the section horizontally */
+    margin-right: auto; /* Center the section horizontally */
+    max-width: 800px; /* Adjust maximum width as needed */
+}
 
+#about h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify; /* Justify the text for better readability */
+    padding: 0 20px;
+    width: 100%; /* Ensure the content uses the full width */
+}
+
+.about-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-content a:hover {
+    text-decoration: underline;
+}
 
 
 /* Responsive Design for General Mobile Devices */
@@ -229,32 +271,48 @@ body {
     .profile p, .profileLinks p, .profileLinks a {
         font-size: 3.5vw; /* Adjust font size */
     }
-
+    
     .menu {
-        position: static; /* Align menu within header */
-        margin-top: 10vh; /* Adjust margin */
-        background: transparent; /* Optional: make background transparent */
+        position: fixed;
+        top: 0;
+        left: 0; /* Align with the left side of the viewport */
+        z-index: 1001; /* Ensure the menu is above most other elements */
+        width: 0; /* Initially, the width is 0 to hide the menu */
+        height: 30%; /* Set the height of the menu */
+        overflow: hidden; /* Prevent content overflow */
+        background: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+        transition: width 0.3s ease; /* Smooth transition for menu width */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        border-top-right-radius: 10px; /* Rounded corners */
+        border-bottom-right-radius: 10px; /* Rounded corners */
+        margin-left: -2vh;
     }
-
+    
+    
     .menu ul {
-        display: none; /* Hide menu by default */
         flex-direction: column;
-        align-items: center;
-        width: 100%; /* Full width */
+        align-items: flex-start; /* Align items to the start (left) */
+        width: 100%; /* Full width of the parent */
+        height: 100%; /* Full height of the parent */
+        padding-top: 60px; /* Padding to avoid overlapping with the top bar */
     }
-
-    .menu.active ul {
-        display: flex; /* Show menu when active */
+    
+    .menu.active {
+        width: 250px; /* Width of the menu when active */
     }
-
+    
     .burger-menu {
-        margin-top: 10vh; /* Adjust margin */
         display: block;
         cursor: pointer;
         color: rgb(18, 1, 1);
         font-size: 24px;
         padding: 10px;
+        position: fixed; /* Fixed position */
+        top: 10px; /* Adjust top position */
+        left: 10px; /* Adjust left position */
+        z-index: 1002; /* Ensure it's above the menu */
     }
+    
 
     .main-content {
         margin-top: 18vh; /* Adjust margin top */
