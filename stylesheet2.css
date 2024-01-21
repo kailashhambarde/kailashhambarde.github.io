@@ -248,6 +248,105 @@ a {
 }
 
 
+
+
+#projects-section {
+    text-align: center; /* Center-align the text in the section */
+    padding: 20px; /* Add padding for spacing */
+}
+
+#projects-section h2 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Space below the heading */
+    display: inline-flex; /* Use flex to align the icon with the text */
+    align-items: center; /* Align the icon and text vertically */
+    justify-content: center; /* Center the items horizontally */
+}
+
+.fa-project-diagram {
+    margin-right: 10px; /* Space between the icon and text */
+}
+
+.project-container {
+    display: flex; /* Enable Flexbox */
+    flex-wrap: wrap; /* Allow the boxes to wrap to the next line */
+    justify-content: center; /* Center the boxes in the container */
+}
+
+.project-box {
+    flex: 0 0 30%; /* Each box takes up 30% of the container width */
+    margin: 10px; /* Add some space around each box */
+    padding: 20px; /* Add padding inside each box */
+    border: 1px solid #ddd; /* A light border for the boxes */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: left; /* Align text inside boxes to the left */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-box {
+        flex: 0 0 45%; /* Adjust box width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-box {
+        flex: 0 0 90%; /* Full width boxes on very small screens */
+    }
+}
+
+.project-box {
+    border: 1px solid #e0e0e0; /* Light border for the box */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #f9f9f9; /* Light background color */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.project-box:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+.project-gif {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 15px;
+}
+
+.project-box h3 {
+    color: #007bff; /* Color for the project title */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    color: #333; /* Darker text color for better readability */
+    line-height: 1.6;
+}
+
+.project-box a.project-link {
+    display: inline-block;
+    background-color: #007bff; /* Background color for the link */
+    color: white; /* Text color for the link */
+    padding: 8px 15px;
+    border-radius: 5px; /* Rounded corners for the link */
+    text-decoration: none; /* Remove underline */
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.project-box a.project-link:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+
+
 /* Responsive Design for General Mobile Devices */
 @media screen and (max-width: 768px) {
     .header {
