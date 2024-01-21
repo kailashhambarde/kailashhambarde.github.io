@@ -23,3 +23,21 @@ window.onload = function() {
 document.querySelector('.burger-menu').addEventListener('click', function() {
     document.querySelector('.menu').classList.toggle('active');
 });
+
+
+  var modal = document.getElementById("constructionModal");
+  var span = document.getElementsByClassName("close")[0];
+
+  window.onload = function() {
+      modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
