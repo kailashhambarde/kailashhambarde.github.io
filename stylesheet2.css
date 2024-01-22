@@ -61,20 +61,33 @@ a {
 
 }
 
-/* Navigation Menu */
+/* Modified Navigation Menu */
 .menu {
     position: fixed;
-    top: 50px; /* Set top equal to the height of the header */
+    top: 50px; 
     left: 0;
     right: 0;
     z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, #6a3093, #a044ff); /* Modern gradient */
+    background: linear-gradient(to left, #6a3093, #a044ff);
     padding: 10px;
-    margin-top: 11.5%;
+    
+}
 
+
+@media screen and (min-width: 1200px) {
+    .menu {
+        top: 25%; 
+    }
+}
+
+/* Responsive adjustments for smaller screens, e.g., MacBook Air */
+@media screen and (max-width: 1199px) {
+    .menu {
+        top: 50px; 
+    }
 }
 
 .menu ul {
@@ -450,7 +463,6 @@ a {
         margin-top: 25vh; /* Adjust margin top for smaller devices */
     }
 
-    /* Any other specific adjustments for smaller screens */
 }
 
 
