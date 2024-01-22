@@ -614,3 +614,15 @@ a {
         flex: 0 0 90%; /* Full width on very small screens */
     }
 }
+
+
+/* Additional styles for Reviewer and Committee Member sections */
+.reviewer-container, .committee-member-container {
+    padding: 10px 20px;
+    background-color: #f4f4f4; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Spacing between sections */
+    text-align: center; /* Center-align text */
+}
+
