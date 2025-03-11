@@ -1,0 +1,121 @@
+- id: lvkmreid
+  title: "Human Re-ID Meets LVLMs: What can we expect?"
+  venue: arXiv, 2025
+  description: "We compare the results due to ChatGPT-4o, Gemini-2.0-Flash, Claude 3.5 Sonnet, and Qwen-VL-Max to a baseline ReID PersonViT model, using the well-known Market1501 dataset."
+  project_page: https://arxiv.org/abs/2501.18698
+  arxiv: 2501.18698
+  image: illuminerf_before.jpg
+  image_mouseover: 
+  authors:
+    - kailashhambarde
+    - pranitasamale
+    - hugo
+  awards:
+    - "Journal Paper"
+- id: fabricdefectsurvey
+  title: "Toward automated fabric defect detection: A survey of recent computer vision approaches"
+  venue: Electronics, 2024
+  description: "A survey of recent computer vision approaches."
+  project_page: https://www.mdpi.com/2079-9292/13/18/3728
+  arxiv: 0000.00000
+  image: reconfusion_before.png
+  image_mouseover: 
+  authors:
+    - ruicarrilho
+    - ehsanyaghoubi
+    - joselindo
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+- id: quantumsupervised
+  title: "A Laplacian-based Quantum Graph Neural Network for Semi-Supervised Learning"
+  venue: Quantum Information Processing, 2024
+  description: "This study investigates the performance of the Laplacian-based Quantum Semi-Supervised Learning (QSSL) method across four benchmark datasets -- Iris, Wine, Breast Cancer Wisconsin, and Heart Disease."
+  project_page: 
+  github: 
+  arxiv: 2408.05498
+  image: camp_before.jpg
+  image_mouseover: 
+  authors:
+    - hamedgholipour
+    - faridbozorgnia
+    - kailashhambarde
+    - hamzehmohammadigheymasi
+    - javiermancilla
+    - andresequeira
+    - joaoneves
+    - hugo
+  awards:
+    - "Journal Paper"
+- id: defectdetectiondataset
+  title: "A novel dataset for fabric defect detection: bridging gaps in anomaly detection"
+  venue: Applied Sciences, 2024
+  description: "In this paper, we introduce a novel dataset comprising a diverse selection of fabrics and defects from a textile company based in Portugal."
+  project_page: https://www.mdpi.com/2076-3417/14/12/5298
+  github:
+  arxiv: 
+  image: hypernerf_before.jpg
+  image_mouseover: 
+  authors:
+    - ruicarrilho
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+- id: advmanufacturing
+  title: "Advancing Manufacturing Energy Efficiency: The Role of AI and Web-Based Tools"
+  venue: ESCI, 2024
+  description: "We demonstrate the system's efficacy using a dataset from a textile company, where our application successfully predicted the target variables with a high level of R-squared of 0.78, using the best regression model."
+  project_page: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10497194"
+  github: 
+  arxiv: 
+  image: hypernerf_before.jpg
+  image_mouseover: hypernerf_after.mp4
+  authors:
+    - asmaelamsaf
+    - pranitasamale
+    - hugo
+    - joaoneves
+    - kailashhambarde
+  awards:
+    - "IEEE Conference Paper"
+- id: imagebasedreid
+  title: "Image-based human re-identification: Which covariates are actually (the most) important?"
+  venue: Image and Vision Computing, 2024
+  description: "We announce the results of an analysis about the subject features that provide the largest variations in re-id performance."
+  project_page: https://www.sciencedirect.com/science/article/pii/S0262885624000209
+  arxiv: 
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+- id: informationretrievalsurvey
+  title: "Information retrieval: recent advances and beyond"
+  venue: IEEE Access, 2023
+  description: "We delve into the historical development of these models, analyze the key advancements and breakthroughs, and address the challenges and limitations faced by researchers and practitioners in the domain."
+  project_page: https://ieeexplore.ieee.org/abstract/document/10184013
+  arxiv: 
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+- id: informationretrievalwsrr
+  title: "WSRR: Weighted Rank-Relevance Sampling for Dense Text Retrieval"
+  venue: International Conference on Information and Communication Technology for Intelligent Systemsn, 2023
+  description: "n this paper we present a new approach for dense text retrieval (termed WRRS: Weighted Rank-Relevance Sampling) that addresses the limitations of current negative sampling strategies."
+  project_page: https://link.springer.com/chapter/10.1007/978-981-99-3758-5_22
+  arxiv: 
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
