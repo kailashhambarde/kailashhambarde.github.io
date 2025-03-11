@@ -1,47 +1,44 @@
-- company: World Labs
-  description: Founding Member
-  dates: "Jan 2024 - (current)"
-  location: San Francisco, CA
-
-- company: Google
-  description: Research Scientist
-  dates: "May 2022 - Jan 2024"
-  location: San Francisco, CA
-
-- company: Google
+- company: Instituto de Telecomunicações
   description: >-
-    Research Intern on the <a href="https://blog.google/technology/research/project-starline/">Project Starline</a> team.
-    Worked on <a href="https://nerfies.github.io">Nerfies</a> and <ahref="https://hypernerf.github.io">HyperNeRF</a>.
-  dates: "Jun 2020 - Sep 2021"
-  location: Seattle, WA
+    Researcher at <a href="https://www.it.pt/">Instituto de Telecomunicações Portugal</a>.
+  dates: "April 2025 - (current)"
+  location: Covilhã, Portugal
 
-- company: NVIDIA
+- company: University of Beira Interior
   description: >-
-    Robotics Research Intern at the <a href="https://www.nvidia.com/en-us/research/robotics/">Seattle Robotics Lab</a>.
-    Worked on <a href="https://latentfusion.github.io">LatentFusion</a>.
-  dates: "Jul 2019 - Nov 2019"
-  location: Seattle, WA
+    Postdoctoral Researcher at <a href="https://www.ubi.pt/">University of Beira Interior</a>.<br />
+    Leading projects on biometric recognition at extreme ranges, collaborating with 6 international universities.<br />
+    Contributed to a fabric defect detection prototype funded by <b>Portugal Recovery and Resilience Plan (PRR)</b>.
+  dates: "Oct 2023 - (April 2025)"
+  location: Covilhã, Portugal
 
-- company: Amazon
-  description: >- 
-    Applied Scientist Intern on the <a href="https://amazon.com/go">Amazon Go</a> team.
-    Worked on human activity detection.
-  dates: "Jul 2017 - Sep 2017"
-  location: Seattle, WA
-
-- company: Ministry of National Defense, Cyber Command
-  description: Software Engineer (mandatory military service). Worked on network monitoring software.
-  dates: "Oct 2013 - Jul 2015"
-  location: Seoul, Korea
-
-- company: Google
-  description: Software Engineering Intern. Create document conversion system for Google Cloud Print.
-  dates: "May 2013 - Aug 2013"
-  location: Mountain View, CA
-
-- company: Qualcomm
+- company: University of Beira Interior
   description: >-
-    Software Engineering Intern. Optimized performance of JGit, reducing push times from hours to seconds.
-    Implemented multi-master support for Gerrit Code Review.
-  dates: "May 2012 - Aug 2012"
-  location: Boulder, CO
+    Researcher at <a href="https://www.ubi.pt/">University of Beira Interior</a>.<br />
+    Developed NLP models for clinical trial document analysis.<br />
+    <b>Funded by FEDER, Fundo de Coesão e Fundo Social Europeu.</b>
+  dates: "Sep 2022 - Jun 2023"
+  location: Covilhã, Portugal
+
+- company: Calance
+  description: >-
+    Senior Data Scientist Consultant at <a href="https://www.calanceus.com/">Calance</a>.<br />
+    Developed and implemented NLP models to extract structured information from clinical trial documents.
+  dates: "Mar 2022 - Mar 2023"
+  location: Gurugram, India
+
+- company: NDS InfoServ
+  description: >-
+    Data Scientist at <a href="https://www.nds.co.in/">NDS InfoServ</a>.<br />
+    Led AI integrations, including TensorFlow, PyTorch, and OCR for business process automation.<br />
+    Developed OCR-based models for document classification and health claims processing.
+  dates: "Mar 2019 - Feb 2022"
+  location: Mumbai, India
+
+- company: SRTM University
+  description: >-
+    Project Fellow at <a href="https://srtmun.ac.in/en/">Swami Ramanand Teerth Marathwada University</a>.<br />
+    Worked on a crime hotspot detection project funded by the Maharashtra Government (INR 108,000).<br />
+    Utilized GIS and machine learning for crime pattern visualization and predictive analysis.
+  dates: "Jun 2015 - Feb 2017"
+  location: Nanded, India

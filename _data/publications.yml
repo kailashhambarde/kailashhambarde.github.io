@@ -4,7 +4,7 @@
   description: "We compare the results due to ChatGPT-4o, Gemini-2.0-Flash, Claude 3.5 Sonnet, and Qwen-VL-Max to a baseline ReID PersonViT model, using the well-known Market1501 dataset."
   project_page: https://arxiv.org/abs/2501.18698
   arxiv: 2501.18698
-  image: illuminerf_before.jpg
+  image: lvkmreid.jpg
   image_mouseover: 
   authors:
     - kailashhambarde
@@ -18,9 +18,9 @@
   description: "A survey of recent computer vision approaches."
   project_page: https://www.mdpi.com/2079-9292/13/18/3728
   arxiv: 0000.00000
-  image: reconfusion_before.png
+  image: fabricdefectsurvey.png
   image_mouseover: 
-  authors:
+  authors:  
     - ruicarrilho
     - ehsanyaghoubi
     - joselindo
@@ -35,7 +35,7 @@
   project_page: 
   github: 
   arxiv: 2408.05498
-  image: camp_before.jpg
+  image: quantumsupervised.png
   image_mouseover: 
   authors:
     - hamedgholipour
@@ -54,8 +54,8 @@
   description: "In this paper, we introduce a novel dataset comprising a diverse selection of fabrics and defects from a textile company based in Portugal."
   project_page: https://www.mdpi.com/2076-3417/14/12/5298
   github:
-  arxiv: 
-  image: hypernerf_before.jpg
+  arxiv: https://www.mdpi.com/2076-3417/14/12/5298
+  image: defectdetectiondataset.jpg
   image_mouseover: 
   authors:
     - ruicarrilho
@@ -70,8 +70,8 @@
   project_page: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10497194"
   github: 
   arxiv: 
-  image: hypernerf_before.jpg
-  image_mouseover: hypernerf_after.mp4
+  image: advmanufacturing.png
+  image_mouseover: 
   authors:
     - asmaelamsaf
     - pranitasamale
@@ -119,3 +119,143 @@
     - hugo
   awards:
     - "Journal Paper"
+- id: covid19diagnosis
+  title: "Diagnosis of Covid-19 via patient breath data using artificial intelligence"
+  venue: Emerging Science Journal, 2023
+  description: "This study aims to develop a point-of-care testing (POCT) system that can detect COVID-19 by detecting volatile organic compounds (VOCs) in a patient's exhaled breath using the Gradient Boosted Trees Learner Algorithm."
+  project_page: https://ijournalse.org/index.php/ESJ/article/view/1411
+  arxiv: 2302.10180
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - OzgeDoguc
+    - GokhanSilahtaroglu
+    - ZehraNurCanbolat
+    - kailashhambarde
+    - AhmetAlperenYigitbasi
+    - HasanGokay
+    - MesutYilmaz
+  awards:
+    - "Journal Paper"  
+- id: augmentationanalysis
+  title: "Augmentation of behavioral analysis framework for E-commerce customers using MLP-based ANN"
+  venue: ICDSM, 2020
+  description: "The main objective is to hunt for classification of the customer’s behavior patterns. Artificial neural network (ANN) model was applied over customer’s dataset to forecast the customer’s purchasing patterns."
+  project_page: https://link.springer.com/chapter/10.1007/978-981-15-0978-0_4
+  arxiv: 
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - kailashhambarde
+    - GokhanSilahtaroglu
+    - santoshkhamitkar
+    - paragbhalchandra
+    - husenshaikh
+    - pritamtamsekar
+    - govindkulkarni
+  awards:
+    - "Conference Paper"
+- id: dataanalytics
+  title: "Data analytics implemented over E-commerce data to evaluate performance of supervised learning approaches in relation to customer behavior."
+  venue: Soft Computing for Problem Solving, 2019
+  description: "This study has made an attempt for the implementation of data analytics over the shared data set of Turkey-based e-commerce company."
+  project_page: https://link.springer.com/chapter/10.1007/978-981-15-0035-0_22
+  arxiv: https://link.springer.com/chapter/10.1007/978-981-15-0035-0_22
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - kailashhambarde
+    - GokhanSilahtaroglu
+    - santoshkhamitkar
+    - paragbhalchandra
+    - husenshaikh
+    - pritamtamsekar
+    - govindkulkarni
+    - pranitasamale
+  awards:
+    - "Conference Paper"
+- id: waterrecharge
+  title: "Prediction of artificial water recharge sites using fusion of RS, GIS, AHP and GA Technologies"
+  venue: Advances in Data Science and Management Proceedings of ICDSM, 2019
+  description: "This paper narrates experimental setup for finding the most suitable area for artificial water recharge sites using a fusion of GIS, RS AHP, and GA technologies."
+  project_page: https://link.springer.com/chapter/10.1007/978-981-15-0978-0_38
+  arxiv: https://link.springer.com/chapter/10.1007/978-981-15-0978-0_38
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - husenshaikh
+    - santoshkhamitkar
+    - paragbhalchandra
+    - pritamtamsekar
+    - govindkulkarni
+    - kailashhambarde
+  awards:
+    - "Conference Paper"
+- id: cropselection
+  title: "Comparative analysis of supervised machine learning algorithms for GIS-based crop selection prediction model."
+  venue: Computing and Network Sustainability Proceedings of IRSCNS, 2019
+  description: "This article deals with the comparative analysis of supervised machine learning algorithms for GIS-based crop selection prediction model (CSPM)."
+  project_page: https://link.springer.com/chapter/10.1007/978-981-13-7150-9_33
+  arxiv: https://link.springer.com/chapter/10.1007/978-981-13-7150-9_33
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - pritamtamsekar
+    - nileshdeshmukh
+    - paragbhalchandra
+    - govindkulkarni
+    - kailashhambarde
+    - husenshaikh
+  awards:
+    - "Conference Paper"
+- id: architecturegis
+  title: "Architectural outline of GIS-based decision support system for crop selection."
+  venue: Smart Computing and Informatics, 2018
+  description: "For Indian farmers, the crop selection decision is a very crucial task as number of factors need to be taken into consideration. To drive out from this situation, a solution is proposed which apply analytic hierarchy process (AHP) and GIS in terms of a crop selection decision support system in Indian scenario."
+  project_page: https://link.springer.com/chapter/10.1007/978-981-10-5544-7_16
+  arxiv: https://link.springer.com/chapter/10.1007/978-981-10-5544-7_16
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - pritamtamsekar
+    - nileshdeshmukh
+    - paragbhalchandra
+    - govindkulkarni
+    - kailashhambarde
+    - husenshaikh
+  awards:
+    - "Conference Paper"
+- id: decisioncrop
+  title: "Architectural outline of decision support system for crop selection using GIS and DM techniques."
+  venue: Computing and Network Sustainability Proceedings of IRSCNS, 2016
+  description: "The crucial task for Indian policy makers and farmers is the decision of crop selection by taking into consideration the various factors, which boosts the precision farming. To overcome this scenario, a decision support system is proposed by using GIS and DM techniques, which helps in deriving a pattern by associating various factors to enhance DSS to suggest potential crop for a region."
+  project_page: https://link.springer.com/chapter/10.1007/978-981-10-3935-5_11
+  arxiv: https://link.springer.com/chapter/10.1007/978-981-10-3935-5_11
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - pritamtamsekar
+    - nileshdeshmukh
+    - paragbhalchandra
+    - govindkulkarni
+    - kailashhambarde
+    - husenshaikh
+  awards:
+    - "Conference Paper"
+- id: spatialpattern  
+  title: "Effective Use of GIS Based Spatial Pattern Technology for Urban Greenery Space Planning: A Case Study for Ganesh Nagar Area of Nanded City."
+  venue: Proceedings of 2nd International Conference on Intelligent Computing and Applications ICICA, 2015
+  description: "The proposed model acts as a decision support system for local government by providing suggestion of best suitable tree on particular location with their description to help the environment and human health."
+  project_page: https://link.springer.com/chapter/10.1007/978-981-10-1645-5_11
+  arxiv: https://link.springer.com/chapter/10.1007/978-981-10-1645-5_11
+  github:
+  image: hypernerf_before.jpg
+  authors:
+    - govindkulkarni
+    - nileshdeshmukh
+    - paragbhalchandra
+    - pritamtamsekar
+    - kailashhambarde
+    - husenshaikh
+  awards:
+    - "Conference Paper"

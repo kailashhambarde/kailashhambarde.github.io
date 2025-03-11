@@ -1,11 +1,23 @@
-- name: University of Washington 
+- name: SRTM University
   description: >-
-    Ph. D in Computer Science, advised by <a href="https://smseitz.com">Steven M. Seitz</a> and
-    <a href="https://homes.cs.washington.edu/~ali/">Ali Farhadi</a>.<br />
-    Supported by Samsung Scholarship 2015-2020 ($50,000/year for 5 years)
-  dates: Fall 2015 - Spring 2022
+    Ph.D. in Computer Science, <a href="https://srtmun.ac.in/en/">Swami Ramanand Teerth Marathwada University</a>, Nanded, MH, India.<br />
+    Research focused on machine learning and computer vision.
+  dates: "2017 - 2020"
 
-- name: University of Illinois at Urbana-Champaign
+- name: SRTM University
   description: >-
-    B.S. in Computer Science, advised by <a href="https://dhoiem.cs.illinois.edu/">Derek Hoiem</a>.
-  dates: Fall 2009 - Spring 2013
+    M.Phil in Computer Science, <a href="https://srtmun.ac.in/en/">Swami Ramanand Teerth Marathwada University</a>, Nanded, MH, India.<br />
+    Advanced research in data science and artificial intelligence.
+  dates: "2015 - 2017"
+
+- name: SRTM University
+  description: >-
+    M.Sc in Computer Science, <a href="https://srtmun.ac.in/en/">Swami Ramanand Teerth Marathwada University</a>, Nanded, MH, India.<br />
+    Specialization in algorithms, machine learning, and deep learning.
+  dates: "2012 - 2014"
+
+- name: SRTM University
+  description: >-
+    BCA in Computer Science, <a href="https://srtmun.ac.in/en/">Swami Ramanand Teerth Marathwada University</a>, Nanded, MH, India.<br />
+    Focus on programming, databases, and software development.
+  dates: "2009 - 2011"
