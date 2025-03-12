@@ -1,3 +1,10 @@
+- name: University of Beira Interior
+  description: >-
+     Postdoctoral Researcher at <a href="https://www.ubi.pt/">University of Beira Interior</a>.<br />
+    Leading projects on biometric recognition at extreme ranges, collaborating with 6 international universities.<br />
+    Contributed to a fabric defect detection prototype funded by <b>Portugal Recovery and Resilience Plan (PRR)</b>.
+  dates: "2017 - 2020"
+
 - name: SRTM University
   description: >-
     Ph.D. in Computer Science, <a href="https://srtmun.ac.in/en/">Swami Ramanand Teerth Marathwada University</a>, Nanded, MH, India.<br />
