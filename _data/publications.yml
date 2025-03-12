@@ -87,7 +87,7 @@
   project_page: https://www.sciencedirect.com/science/article/pii/S0262885624000209
   arxiv: 
   github:
-  image: hypernerf_before.jpg
+  image: imagebasedreid.jpg
   authors:
     - kailashhambarde
     - hugo
@@ -100,7 +100,7 @@
   project_page: https://ieeexplore.ieee.org/abstract/document/10184013
   arxiv: 
   github:
-  image: hypernerf_before.jpg
+  image: informationretrievalsurvey.jpg
   authors:
     - kailashhambarde
     - hugo
@@ -113,7 +113,7 @@
   project_page: https://link.springer.com/chapter/10.1007/978-981-99-3758-5_22
   arxiv: 
   github:
-  image: hypernerf_before.jpg
+  image: informationretrievalwsrr.jpg
   authors:
     - kailashhambarde
     - hugo
@@ -126,7 +126,7 @@
   project_page: https://ijournalse.org/index.php/ESJ/article/view/1411
   arxiv: 2302.10180
   github:
-  image: hypernerf_before.jpg
+  image: covid19diagnosis.jpg
   authors:
     - OzgeDoguc
     - GokhanSilahtaroglu
@@ -144,7 +144,7 @@
   project_page: https://link.springer.com/chapter/10.1007/978-981-15-0978-0_4
   arxiv: 
   github:
-  image: hypernerf_before.jpg
+  image: augmentationanalysis.jpg
   authors:
     - kailashhambarde
     - GokhanSilahtaroglu
