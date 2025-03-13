@@ -25,7 +25,7 @@ email: kailas.srt@gmail.com
 description: >-
   I am a researcher in computer vision and AI at Instituto de Telecomunicações [IT](https://www.it.pt/).
   I was previously a post-doctoral researcher at University of Beira Interior [UBI](https://www.ubi.pt/en/), senior data scientist at [calanceus](https://www.calanceus.com/), data scientist at [ndsinfo](https://www.ndsinfo.com/) and Ph.D scholar at Swami Ramanand Teerth Marathwada University [SRTMUN](https://srtmun.ac.in/en/).
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "https://kailashhambarde.github.io" # the subpath of your site, e.g. /blog
 url: "https://kailashhambarde.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kailas_srt
 github_username: kailashhambarde
