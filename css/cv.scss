@@ -3,9 +3,28 @@
 
 @import "base";
 
+// Color scheme
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$text-color: #2c3e50;
+$text-light: #555;
+$border-color: #e0e0e0;
+$bg-light: #f8f9fa;
+
 body {
-  margin-top: 1em;
+  margin-top: 2em;
   font-family: "Noto Sans", sans-serif;
+  color: $text-color;
+  line-height: 1.7;
+}
+
+.title {
+    color: $text-color;
+    font-family: 'Google Sans', sans-serif;
+}
+
+.subtitle {
+    color: $text-light;
 }
 
 .portrait-column {
@@ -15,24 +34,85 @@ body {
 .portrait-image {
     border-radius: 50%;
     max-width: 7em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .author-me {
     font-weight: 600;
+    color: $text-color;
 }
 
 h2 {
-    margin-top: 0.5em !important;
-    margin-bottom: 0.3em !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.5em !important;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid $secondary-color;
+    display: inline-block;
+    color: $text-color;
+    font-family: 'Google Sans', sans-serif;
 }
 
 .columns {
-    margin-bottom: 0 !important;
+    margin-bottom: 0.75rem !important;
+    padding: 0.5rem 0;
+    
+    &:hover {
+        background-color: $bg-light;
+        border-radius: 4px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        transition: all 0.2s ease;
+    }
+}
+
+.content {
+    a {
+        color: $text-color;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+    
+    b {
+        color: $text-color;
+        font-weight: 600;
+    }
+}
+
+.publication-authors {
+    a {
+        color: $text-color !important;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: $secondary-color !important;
+            text-decoration: underline;
+        }
+    }
 }
 
 @media print {
     html, body {
         height: auto;
-        font-size: 9pt; /* changing to 10pt has no impact */
+        font-size: 9pt;
+    }
+    
+    .columns:hover {
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portrait-image {
+        max-width: 5em;
+        margin-bottom: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
     }
 }

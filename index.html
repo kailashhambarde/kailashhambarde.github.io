@@ -39,42 +39,35 @@ layout: null
   <section class="hero">
     <div class="hero-body container is-max-desktop">
       <div class="columns is-vcentered">
-
-        <div class="column is-4">
+        <div class="column is-3">
           <div class="portrait">
-            <img src="{{ '/images/portrait.jpg' | relative_url }}" />
+            <img src="{{ '/images/portrait.jpg' | relative_url }}" alt="{{ site.name }}" />
           </div>
         </div>
 
         <div class="column">
-          <h1 class="title">
-            <b>Hello, I'm {{ site.name }}</b>
-          </h1>
-          <div class="content has-text-justified">
+          <h1 class="hero-title">{{ site.name }}</h1>
+          <div class="hero-subtitle">{{ site.position }}</div>
+          <div class="hero-description">
             {{ site.description | markdownify }}
-            <div class="buttons">
-              <a class="external-link button is-light" href="cv.html">
-                <span class="icon"><i class="fas fa-file"></i></span>
-                <span>CV</span>
-              </a>
-
-              <a class="external-link button is-light"
-                href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-                <span class="icon"><i class="ai ai-google-scholar"></i></span>
-                <span>Scholar</span>
-              </a>
-
-              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Github</span>
-              </a>
-
-              <a class="external-link button is-light" href="https://twitter.com/{{ site.twitter_username }}">
-                <span class="icon"><i class="fab fa-twitter"></i></span>
-                <span>Twitter</span>
-              </a>
-            </div>
-
+          </div>
+          <div class="hero-buttons">
+            <a class="hero-button" href="cv.html">
+              <i class="fas fa-file"></i>
+              <span>CV</span>
+            </a>
+            <a class="hero-button" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
+              <i class="ai ai-google-scholar"></i>
+              <span>Scholar</span>
+            </a>
+            <a class="hero-button" href="https://github.com/{{ site.github_username }}">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a class="hero-button" href="https://twitter.com/{{ site.twitter_username }}">
+              <i class="fab fa-twitter"></i>
+              <span>Twitter</span>
+            </a>
           </div>
         </div>
       </div>
@@ -107,7 +100,7 @@ layout: null
       {% for publication in site.data.publications %}
       <div class="publication-block columns">
 
-        <div class="column is-2">
+        <div class="column is-3">
           <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
             {% if publication.image_mouseover contains "mp4" %}
             <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
@@ -115,7 +108,18 @@ layout: null
               Your browser does not support the video tag.
             </video>
             {% endif %}
-            <img alt="{{ publication.title }}" src="./images/{{ publication.image }}" />
+            {% if publication.image %}
+            <img alt="{{ publication.title }}" src="./images/{{ publication.image }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'; this.parentElement.classList.add('placeholder-image');" />
+            <div class="placeholder-image" style="display: none;">
+              <i class="fas fa-file-alt"></i>
+              <span>No Image</span>
+            </div>
+            {% else %}
+            <div class="placeholder-image">
+              <i class="fas fa-file-alt"></i>
+              <span>No Image</span>
+            </div>
+            {% endif %}
           </div>
         </div>
 
@@ -190,14 +194,18 @@ layout: null
         <div class="column is-8">
           <div class="content">
             <p>
-              Feel free to <a href="https://github.com/keunhong/keunhong.github.io">borrow this template</a>.
+              Last updated: <span id="current-year"></span> | 
+              <a href="https://github.com/keunhong/keunhong.github.io">Template</a>
             </p>
           </div>
         </div>
       </div>
     </div>
   </footer>
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=wvJtg5CzMjnCQfHM8rLUTFuZPZKFj3UvvNiNrr2iDZI&cl=ffffff&w=a"></script>
+
+  <div class="clustrmaps-container" style="text-align: center; padding: 2rem 0; background-color: #f8f9fa;">
+    <script type="text/javascript" id="clustrmaps" src="https://clustrmaps.com/map_v2.js?d=wvJtg5CzMjnCQfHM8rLUTFuZPZKFj3UvvNiNrr2iDZI&cl=ffffff&w=a"></script>
+  </div>
 
 </body>
 </html>

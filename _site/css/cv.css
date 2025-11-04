@@ -3,8 +3,19 @@ body {
 }
 
 body {
-  margin-top: 1em;
+  margin-top: 2em;
   font-family: "Noto Sans", sans-serif;
+  color: #2c3e50;
+  line-height: 1.7;
+}
+
+.title {
+  color: #2c3e50;
+  font-family: "Google Sans", sans-serif;
+}
+
+.subtitle {
+  color: #555;
 }
 
 .portrait-column {
@@ -14,25 +25,75 @@ body {
 .portrait-image {
   border-radius: 50%;
   max-width: 7em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .author-me {
   font-weight: 600;
+  color: #2c3e50;
 }
 
 h2 {
-  margin-top: 0.5em !important;
-  margin-bottom: 0.3em !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.5em !important;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  color: #2c3e50;
+  font-family: "Google Sans", sans-serif;
 }
 
 .columns {
-  margin-bottom: 0 !important;
+  margin-bottom: 0.75rem !important;
+  padding: 0.5rem 0;
+}
+.columns:hover {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.content a {
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+.content a:hover {
+  color: #3498db;
+}
+.content b {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.publication-authors a {
+  color: #2c3e50 !important;
+  transition: color 0.3s ease;
+}
+.publication-authors a:hover {
+  color: #3498db !important;
+  text-decoration: underline;
 }
 
 @media print {
   html, body {
     height: auto;
-    font-size: 9pt; /* changing to 10pt has no impact */
+    font-size: 9pt;
+  }
+  .columns:hover {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portrait-image {
+    max-width: 5em;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
   }
 }
 
