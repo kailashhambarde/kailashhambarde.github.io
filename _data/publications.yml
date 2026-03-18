@@ -1,4 +1,19 @@
 # ---- 2026 ----
+- id: vreidxfd
+  title: "VReID-XFD: Video-based Person Re-identification at Extreme Far Distance Challenge Results"
+  venue: "IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026"
+  description: "Challenge results for video-based person re-identification at extreme far distances, benchmarking state-of-the-art methods."
+  project_page:
+  arxiv:
+  image: vreid-xfd.png
+  authors:
+    - kailashhambarde
+    - hugo
+    - mdrashidunnabi
+    - pranitasamale
+  awards:
+    - "Workshop Paper"
+
 - id: detreidx
   title: "DetReIDX: A Stress-Test Dataset for Real-World UAV-Based Person Recognition"
   venue: "IEEE Transactions on Biometrics, Behavior, and Identity Science, 2026"
@@ -20,22 +35,7 @@
     - hugo
   awards:
     - "Journal Paper"
-
-- id: vreidxfd
-  title: "VReID-XFD: Video-based Person Re-identification at Extreme Far Distance Challenge Results"
-  venue: "IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026"
-  description: "Challenge results for video-based person re-identification at extreme far distances, benchmarking state-of-the-art methods."
-  project_page:
-  arxiv:
-  image: vreid-xfd.png
-  authors:
-    - kailashhambarde
-    - hugo
-    - mdrashidunnabi
-    - pranitasamale
-  awards:
-    - "Workshop Paper"
-
+    
 # ---- 2025 ----
 - id: vmtaps
   title: "VM-TAPS: View-specific Memory with Temporal and Scale Awareness Framework for Video-based Cross-View Person Re-Identification"
