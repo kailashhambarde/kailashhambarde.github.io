@@ -5,7 +5,7 @@
   description: "A stress-test dataset designed for UAV-based person recognition under real-world conditions, evaluating detection and re-identification at extreme distances."
   project_page:
   arxiv:
-  image:
+  image: detreidx.jpg
   authors:
     - kailashhambarde
     - nzakiesembongo
@@ -27,7 +27,7 @@
   description: "Challenge results for video-based person re-identification at extreme far distances, benchmarking state-of-the-art methods."
   project_page:
   arxiv:
-  image:
+  image: vreid-xfd.png
   authors:
     - kailashhambarde
     - hugo
@@ -43,7 +43,7 @@
   description: "View-specific memory framework with temporal and scale awareness for video-based cross-view person re-identification."
   project_page:
   arxiv:
-  image:
+  image: vmtaps.png
   authors:
     - mdrashidunnabi
     - kailashhambarde
@@ -59,7 +59,7 @@
   description: "Results of the AG-VPReID 2025 challenge on aerial-ground video-based person re-identification."
   project_page:
   arxiv: 2506.22843
-  image:
+  image: agvpreid2025.png
   authors:
     - kailashhambarde
     - hugo
@@ -72,7 +72,7 @@
   description: "A comprehensive survey of causality-driven approaches in video-based person re-identification under unconstrained real-world conditions."
   project_page:
   arxiv:
-  image:
+  image: lvkmreid.jpg
   authors:
     - mdrashidunnabi
     - kailashhambarde
@@ -86,7 +86,7 @@
   description: "Analysis of domain generalization challenges in gender recognition across unseen environments."
   project_page:
   arxiv:
-  image:
+  image: genderrecognition.png
   authors:
     - nzakiesembongo
     - kailashhambarde
@@ -100,7 +100,7 @@
   description: "A causal-based framework for agnostic intelligent data analysis applied to manufacturing scenarios."
   project_page:
   arxiv:
-  image:
+  image: lusitanodata.png
   authors:
     - asmaelamsaf
     - kailashhambarde
@@ -151,7 +151,7 @@
   description: "Hybrid deep learning approach for multimodal biometric fusion combining iris, face, and fingerprint modalities."
   project_page: https://doi.org/10.1007/978-3-032-00793-3_16
   arxiv:
-  image:
+  image: multimodalbiometric.png
   authors:
     - kailashhambarde
     - hugo
@@ -164,7 +164,7 @@
   description: "Comparative study of Vision Transformers versus CNNs for medical image analysis tasks."
   project_page:
   arxiv:
-  image:
+  image: vitvscnn.png
   authors:
     - pranitasamale
     - kailashhambarde
@@ -178,7 +178,7 @@
   description: "Comparison of Faster R-CNN and YOLOv7 object detection frameworks for automated fabric defect detection."
   project_page:
   arxiv:
-  image:
+  image: vitvscnn.png
   authors:
     - ruicarrilho
     - kailashhambarde
@@ -297,7 +297,7 @@
   description: "ANN model applied over customer datasets to forecast purchasing patterns."
   project_page: https://link.springer.com/chapter/10.1007/978-981-15-0978-0_4
   arxiv:
-  image:
+  image: multimodalbiometric.png
   authors:
     - kailashhambarde
     - GokhanSilahtaroglu
@@ -315,7 +315,7 @@
   description: "Data analytics over Turkey-based e-commerce dataset evaluating supervised learning approaches."
   project_page: https://link.springer.com/chapter/10.1007/978-981-15-0035-0_22
   arxiv:
-  image:
+  image: multimodalbiometric.png
   authors:
     - kailashhambarde
     - GokhanSilahtaroglu
@@ -334,7 +334,7 @@
   description: "Finding suitable areas for artificial water recharge using GIS, RS, AHP and GA technologies."
   project_page: https://link.springer.com/chapter/10.1007/978-981-15-0978-0_38
   arxiv:
-  image:
+  image: multimodalbiometric.png
   authors:
     - husenshaikh
     - santoshkhamitkar
@@ -351,7 +351,7 @@
   description: "Comparative analysis of supervised ML algorithms for GIS-based crop selection."
   project_page: https://link.springer.com/chapter/10.1007/978-981-13-7150-9_33
   arxiv:
-  image:
+  image: multimodalbiometric.png
   authors:
     - pritamtamsekar
     - nileshdeshmukh
@@ -368,7 +368,7 @@
   description: "AHP and GIS-based crop selection decision support system for Indian farmers."
   project_page: https://link.springer.com/chapter/10.1007/978-981-10-5544-7_16
   arxiv:
-  image:
+  image: multimodalbiometric.png
   authors:
     - pritamtamsekar
     - nileshdeshmukh
@@ -385,7 +385,7 @@
   description: "Decision support system using GIS and DM techniques for precision farming in India."
   project_page: https://link.springer.com/chapter/10.1007/978-981-10-3935-5_11
   arxiv:
-  image:
+  image: multimodalbiometric.png
   authors:
     - pritamtamsekar
     - nileshdeshmukh
@@ -402,7 +402,7 @@
   description: "Decision support system for local government providing suggestions for tree placement based on GIS spatial pattern analysis."
   project_page: https://link.springer.com/chapter/10.1007/978-981-10-1645-5_11
   arxiv:
-  image:
+  image: multimodalbiometric.png
   authors:
     - govindkulkarni
     - nileshdeshmukh
