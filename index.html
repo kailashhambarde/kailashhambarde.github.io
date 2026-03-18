@@ -5,207 +5,337 @@ layout: null
 <html lang="en-US">
 
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description | strip_html | truncate: 160 }}">
+  <title>{{ site.name }} — Researcher</title>
 
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>{{ site.name }}</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', '{{ site.google_analytics }}');
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+
+  <!-- Bulma CSS -->
   <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
 
+  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
-  <script src="{{ '/js/index.js' | relative_url }}"></script>
 </head>
 
 <body>
 
-  <section class="hero">
-    <div class="hero-body container is-max-desktop">
-      <div class="columns is-vcentered">
-        <div class="column is-3">
+  <!-- ===== NAVBAR ===== -->
+  <nav class="topnav" id="topnav">
+    <div class="container is-max-desktop topnav-inner">
+      <a class="topnav-brand" href="#about">KH</a>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#research">Research</a>
+        <a class="nav-link" href="#news">News</a>
+        <a class="nav-link" href="#publications">Publications</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link nav-cv" href="cv.html"><i class="fas fa-file-alt"></i> CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== ABOUT / HERO ===== -->
+  <section id="about" class="about-section">
+    <div class="container is-max-desktop">
+      <div class="columns is-vcentered about-columns">
+
+        <div class="column is-narrow portrait-col">
           <div class="portrait">
             <img src="{{ '/images/portrait.jpg' | relative_url }}" alt="{{ site.name }}" />
           </div>
         </div>
 
-        <div class="column">
-          <h1 class="hero-title">{{ site.name }}</h1>
-          <div class="hero-subtitle">{{ site.position }}</div>
-          <div class="hero-description">
-            {{ site.description | markdownify }}
+        <div class="column about-text-col">
+          <h1 class="about-name">{{ site.name }}</h1>
+
+          <div class="about-positions">
+            <div class="position-line">
+              <span>Researcher · <a href="https://www.it.pt/Members/Index/40083" target="_blank">Instituto de Telecomunicações</a>
+              &amp; Docente · <a href="https://www.ubi.pt/" target="_blank">UBI</a>, Portugal</span>
+            </div>
+            <div class="position-line muted">
+              <span>Pattern and Image Analysis · Information and Data Sciences</span>
+            </div>
           </div>
-          <div class="hero-buttons">
-            <a class="hero-button" href="cv.html">
-              <i class="fas fa-file"></i>
-              <span>CV</span>
+
+          <div class="about-buttons">
+            <a class="about-btn" href="cv.html">
+              <i class="fas fa-file-alt"></i> CV
             </a>
-            <a class="hero-button" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-              <i class="ai ai-google-scholar"></i>
-              <span>Scholar</span>
+            <a class="about-btn" href="https://scholar.google.com/citations?user={{ site.google_scholar }}" target="_blank">
+              <i class="ai ai-google-scholar"></i> Google Scholar
             </a>
-            <a class="hero-button" href="https://github.com/{{ site.github_username }}">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
+            <a class="about-btn" href="https://github.com/{{ site.github_username }}" target="_blank">
+              <i class="fab fa-github"></i> GitHub
             </a>
-            <a class="hero-button" href="https://twitter.com/{{ site.twitter_username }}">
-              <i class="fab fa-twitter"></i>
-              <span>Twitter</span>
+            <a class="about-btn" href="https://www.it.pt/Members/Index/40083" target="_blank">
+              <i class="fas fa-globe"></i> IT Profile
+            </a>
+            <a class="about-btn" href="mailto:{{ site.email }}">
+              <i class="fas fa-envelope"></i> Email
             </a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- News. -->
-  <div class="hr">
-    <div class="container">
-      <hr>
-    </div>
-  </div>
-
-  <section class="section">
+  <!-- ===== RESEARCH INTERESTS ===== -->
+  <section id="research" class="content-section alt-bg">
     <div class="container is-max-desktop">
+      <h2 class="section-heading">Research Interests</h2>
+      <div class="interest-tags">
+        <span class="interest-tag">Computer Vision</span>
+        <span class="interest-tag">Person Re-Identification</span>
+        <span class="interest-tag">Biometric Recognition</span>
+        <span class="interest-tag">Deep Learning</span>
+        <span class="interest-tag">Vision Transformers</span>
+        <span class="interest-tag">Large Vision-Language Models</span>
+        <span class="interest-tag">Information Retrieval</span>
+        <span class="interest-tag">NLP</span>
+      </div>
+    </div>
+  </section>
 
-      <!--<h2 class="title is-3">News</h2>
-      <div class="content">
-        <ul>
-          {% for news in site.data.news %}
-          <li>
-            <b>{{ news.date }}</b>: {{ news.description | markdownify | remove: '<p>' | remove: '</p>' }}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>-->
+  <!-- ===== NEWS ===== -->
+  <section id="news" class="content-section">
+    <div class="container is-max-desktop">
+      <h2 class="section-heading">News</h2>
+      <div class="news-list">
+        {% for item in site.data.news limit:6 %}
+        <div class="news-row">
+          <span class="news-date">{{ item.date }}</span>
+          <span class="news-body">{{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 
-      <h2 class="title is-3">Publications</h2>
+  <!-- ===== PUBLICATIONS ===== -->
+  <section id="publications" class="content-section alt-bg">
+    <div class="container is-max-desktop">
+      <h2 class="section-heading">Publications</h2>
 
-      {% for publication in site.data.publications %}
-      <div class="publication-block columns">
+      {% for pub in site.data.publications %}
+      <div class="pub-block columns">
 
         <div class="column is-3">
-          <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
-            {% if publication.image_mouseover contains "mp4" %}
-            <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-              <source src="./images/{{ publication.image_mouseover }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            {% endif %}
-            {% if publication.image %}
-            <img alt="{{ publication.title }}" src="./images/{{ publication.image }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'; this.parentElement.classList.add('placeholder-image');" />
-            <div class="placeholder-image" style="display: none;">
+          <div class="pub-thumb">
+            {% if pub.image %}
+            <img src="./images/{{ pub.image }}" alt="{{ pub.title }}"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="pub-thumb-placeholder" style="display:none;">
               <i class="fas fa-file-alt"></i>
-              <span>No Image</span>
             </div>
             {% else %}
-            <div class="placeholder-image">
+            <div class="pub-thumb-placeholder">
               <i class="fas fa-file-alt"></i>
-              <span>No Image</span>
             </div>
             {% endif %}
           </div>
         </div>
 
         <div class="column">
-          <div class="content">
-            <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
-            <div class="publication-authors">
-              {% for author_id in publication.authors %}
-              {% assign author = site.data.authors[author_id] %}
-              <span class="author-block {% if author.is_me %}author-me{% endif %}">
-                {% if author.is_me %}
-                {{ author.first_name }} {{author.middle_name}} {{ author.last_name }}{% if forloop.last == false %},{%
-                endif %}
-                {% else %}
-                <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name
-                  }}</a>{% if forloop.last == false %},{% endif %}
-                {% endif %}
-              </span>
-              {% endfor %}
-            </div>
-            <div class="publication-venue">
-              <span>{{ publication.venue }}</span>
-              {% for award in publication.awards %}
-                <span class="publication-venue-emph">{{ award }}<span>
-              {% endfor %}
-            </div>
-            <p class="publication-description">{{ publication.description }}</p>
-            <!-- Publication Links. -->
-            <div class="publication-links buttons field has-addons">
-              <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
-                <span class="icon"><i class="fas fa-globe-asia"></i></span>
-                <span>Project Page</span>
-              </a>
-              <a class="external-link button is-small is-ghost" href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
-                <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>PDF</span>
-              </a>
-              <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ publication.arxiv }}">
-                <span class="icon"><i class="ai ai-arxiv"></i></span>
-                <span>arXiv</span>
-              </a>
-              {% if publication.github %}
-              <a class="external-link button is-small is-ghost" href="https://github.com/{{ publication.github }}">
-                <span class="icon"><i class="fa fab fa-github"></i></span>
-                <span>Code</span>
-              </a>
+          <h3 class="pub-title">
+            {% if pub.project_page %}
+            <a href="{{ pub.project_page }}" target="_blank">{{ pub.title }}</a>
+            {% else %}
+            {{ pub.title }}
+            {% endif %}
+          </h3>
+
+          <div class="pub-authors">
+            {% for author_id in pub.authors %}
+            {% assign author = site.data.authors[author_id] %}
+            <span class="pub-author {% if author.is_me %}pub-author-me{% endif %}">
+              {% if author.is_me %}
+              {{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}{% unless forloop.last %},{% endunless %}
+              {% else %}
+              {% if author.website %}<a href="{{ author.website }}" target="_blank">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}</a>{% else %}{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}{% endif %}{% unless forloop.last %},{% endunless %}
               {% endif %}
-            </div>
-            <!--/ Publication Links. -->
+            </span>
+            {% endfor %}
+          </div>
+
+          <div class="pub-venue">
+            <span class="pub-venue-name">{{ pub.venue }}</span>
+            {% for award in pub.awards %}
+            <span class="pub-badge">{{ award }}</span>
+            {% endfor %}
+          </div>
+
+          <p class="pub-desc">{{ pub.description }}</p>
+
+          <div class="pub-links">
+            {% if pub.project_page %}
+            <a class="pub-link-btn" href="{{ pub.project_page }}" target="_blank">
+              <i class="fas fa-globe"></i> Project
+            </a>
+            {% endif %}
+            {% if pub.arxiv and pub.arxiv != "" and pub.arxiv != "0000.00000" %}
+            {% unless pub.arxiv contains "http" %}
+            <a class="pub-link-btn" href="https://arxiv.org/abs/{{ pub.arxiv }}" target="_blank">
+              <i class="ai ai-arxiv"></i> arXiv
+            </a>
+            {% endunless %}
+            {% endif %}
+            {% if pub.github and pub.github != "" %}
+            <a class="pub-link-btn" href="https://github.com/{{ pub.github }}" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+            {% endif %}
           </div>
         </div>
+
       </div>
       {% endfor %}
+
     </div>
   </section>
 
 
-  <footer class="footer">
-    <div class="container">
-      <div class="content footer-links has-text-centered">
-        <a href="mailto:{{ site.email }}">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a class="external-link" href="https://github.com/{{ site.github_username }}">
-          <i class="fab fa-github"></i>
-        </a>
-        <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-          <i class="ai ai-google-scholar"></i>
-        </a>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              Last updated: <span id="current-year"></span> | 
-              <a href="https://github.com/keunhong/keunhong.github.io">Template</a>
-            </p>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="content-section alt-bg">
+    <div class="container is-max-desktop">
+      <h2 class="section-heading">Contact</h2>
+      <div class="columns">
+        <div class="column is-half">
+          <div class="contact-list">
+            <div class="contact-row">
+              <i class="fas fa-envelope contact-icon"></i>
+              <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-building contact-icon"></i>
+              <span>Instituto de Telecomunicações<br>
+              Departamento de Informática, UBI<br>
+              Covilhã 6201-001, Portugal</span>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-link contact-icon"></i>
+              <a href="https://www.it.pt/Members/Index/40083" target="_blank">IT Profile — it.pt</a>
+            </div>
           </div>
         </div>
+        <div class="column is-half">
+          <div class="contact-social">
+            <a class="social-btn" href="mailto:{{ site.email }}">
+              <i class="fas fa-envelope"></i><span>Email</span>
+            </a>
+            <a class="social-btn" href="https://scholar.google.com/citations?user={{ site.google_scholar }}" target="_blank">
+              <i class="ai ai-google-scholar"></i><span>Scholar</span>
+            </a>
+            <a class="social-btn" href="https://github.com/{{ site.github_username }}" target="_blank">
+              <i class="fab fa-github"></i><span>GitHub</span>
+            </a>
+            <a class="social-btn" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+              <i class="fab fa-twitter"></i><span>Twitter</span>
+            </a>
+            <a class="social-btn" href="https://www.it.pt/Members/Index/40083" target="_blank">
+              <i class="fas fa-globe"></i><span>IT Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container is-max-desktop">
+      <div class="footer-inner">
+        <p class="footer-copy">
+          &copy; <span id="current-year"></span> {{ site.name }}
+        </p>
+        <p class="footer-note">
+          Researcher · Instituto de Telecomunicações · University of Beira Interior
+        </p>
       </div>
     </div>
   </footer>
 
-  <div class="clustrmaps-container" style="text-align: center; padding: 2rem 0; background-color: #f8f9fa;">
-    <script type="text/javascript" id="clustrmaps" src="https://clustrmaps.com/map_v2.js?d=wvJtg5CzMjnCQfHM8rLUTFuZPZKFj3UvvNiNrr2iDZI&cl=ffffff&w=a"></script>
+  <!-- ClusterMaps -->
+  <div class="clustrmaps-wrap">
+    <script type="text/javascript" id="clustrmaps"
+      src="https://clustrmaps.com/map_v2.js?d=wvJtg5CzMjnCQfHM8rLUTFuZPZKFj3UvvNiNrr2iDZI&cl=ffffff&w=200"></script>
   </div>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const burger = document.getElementById('navBurger');
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('is-open');
+      burger.classList.toggle('is-active');
+    });
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        burger.classList.remove('is-active');
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('topnav');
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 70;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id], div[id="about"]');
+    const navItems = document.querySelectorAll('.nav-link[href^="#"]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+      });
+      navItems.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
 
 </body>
 </html>

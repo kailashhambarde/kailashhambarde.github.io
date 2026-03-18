@@ -1,5 +1,6 @@
 kailashhambarde:
   first_name: Kailash
+  middle_name: "A."
   last_name: Hambarde
   website: https://kailashhambarde.github.io
   is_me: true
@@ -14,15 +15,15 @@ hugo:
 ruicarrilho:
   first_name: Rui
   last_name: Carrilho
-  website: 
-ehsanyaghoubi: 
+  website:
+ehsanyaghoubi:
   first_name: Ehsan
   last_name: Yaghoubi
-  website: 
+  website:
 joselindo:
   first_name: José
   last_name: Lindo
-  website: 
+  website:
 hamedgholipour:
   first_name: Hamed
   last_name: Gholipour
@@ -50,6 +51,42 @@ joaoneves:
 asmaelamsaf:
   first_name: Asmae
   last_name: Lamsaf
+  website:
+mdrashidunnabi:
+  first_name: Md
+  last_name: Rashidunnabi
+  website:
+mppavankumar:
+  first_name: M.P. Pavan
+  last_name: Kumar
+  website:
+satishmekewad:
+  first_name: Satish
+  last_name: Mekewad
+  website:
+carolinafernandes:
+  first_name: Carolina
+  last_name: Fernandes
+  website:
+alicenithya:
+  first_name: Alice
+  last_name: Nithya
+  website:
+pawanwasnik:
+  first_name: Pawan
+  last_name: Wasnik
+  website:
+vascolopes:
+  first_name: Vasco
+  last_name: Lopes
+  website:
+nzakiesembongo:
+  first_name: Nzakiese
+  last_name: Mbongo
+  website:
+moharramchallenger:
+  first_name: Moharram
+  last_name: Challenger
   website:
 OzgeDoguc:
   first_name: Özge
@@ -94,4 +131,8 @@ pritamtamsekar:
 govindkulkarni:
   first_name: Govind
   last_name: Kulkarni
+  website:
+nileshdeshmukh:
+  first_name: Nilesh
+  last_name: Deshmukh
   website:

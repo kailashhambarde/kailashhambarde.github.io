@@ -1,42 +1,136 @@
+# ---- 2026 ----
+- id: detreidx
+  title: "DetReIDX: A Stress-Test Dataset for Real-World UAV-Based Person Recognition"
+  venue: "IEEE Transactions on Biometrics, Behavior, and Identity Science, 2026"
+  description: "A stress-test dataset designed for UAV-based person recognition under real-world conditions, evaluating detection and re-identification at extreme distances."
+  project_page:
+  arxiv:
+  image:
+  authors:
+    - kailashhambarde
+    - nzakiesembongo
+    - mppavankumar
+    - satishmekewad
+    - carolinafernandes
+    - GokhanSilahtaroglu
+    - alicenithya
+    - pawanwasnik
+    - mdrashidunnabi
+    - pranitasamale
+    - hugo
+  awards:
+    - "Journal Paper"
+
+- id: vreidxfd
+  title: "VReID-XFD: Video-based Person Re-identification at Extreme Far Distance Challenge Results"
+  venue: "IEEE/CVF Winter Conference on Applications of Computer Vision Workshop (WACVW), 2026"
+  description: "Challenge results for video-based person re-identification at extreme far distances, benchmarking state-of-the-art methods."
+  project_page:
+  arxiv:
+  image:
+  authors:
+    - kailashhambarde
+    - hugo
+    - mdrashidunnabi
+    - pranitasamale
+  awards:
+    - "Workshop Paper"
+
+# ---- 2025 ----
+- id: vmtaps
+  title: "VM-TAPS: View-specific Memory with Temporal and Scale Awareness Framework for Video-based Cross-View Person Re-Identification"
+  venue: "IJCB 2025: IEEE International Joint Conference on Biometrics (in press)"
+  description: "View-specific memory framework with temporal and scale awareness for video-based cross-view person re-identification."
+  project_page:
+  arxiv:
+  image:
+  authors:
+    - mdrashidunnabi
+    - kailashhambarde
+    - vascolopes
+    - joaoneves
+    - hugo
+  awards:
+    - "Conference Paper"
+
+- id: agvpreid2025
+  title: "AG-VPReID 2025: Aerial-Ground Video-based Person Re-identification Challenge Results"
+  venue: "IJCB 2025: IEEE International Joint Conference on Biometrics (in press)"
+  description: "Results of the AG-VPReID 2025 challenge on aerial-ground video-based person re-identification."
+  project_page:
+  arxiv: 2506.22843
+  image:
+  authors:
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Challenge Paper"
+
+- id: causalityreidsuvey
+  title: "Causality and 'In-the-Wild' Video-Based Person Re-Identification: A Survey"
+  venue: "Electronics, 2025"
+  description: "A comprehensive survey of causality-driven approaches in video-based person re-identification under unconstrained real-world conditions."
+  project_page:
+  arxiv:
+  image:
+  authors:
+    - mdrashidunnabi
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+
+- id: genderrecognition
+  title: "From One Domain to Another: The Pitfalls of Gender Recognition in Unseen Environments"
+  venue: "Sensors, 2025"
+  description: "Analysis of domain generalization challenges in gender recognition across unseen environments."
+  project_page:
+  arxiv:
+  image:
+  authors:
+    - nzakiesembongo
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+
+- id: lusitanodata
+  title: "LUSITANO-DATA: A Causal-Based Framework for Agnostic Intelligent Data Analysis"
+  venue: "IEEE 2nd International Conference on Artificial Intelligence and Machine Vision (AIMV'25), 2025"
+  description: "A causal-based framework for agnostic intelligent data analysis applied to manufacturing scenarios."
+  project_page:
+  arxiv:
+  image:
+  authors:
+    - asmaelamsaf
+    - kailashhambarde
+    - pranitasamale
+    - joaoneves
+    - hugo
+  awards:
+    - "Conference Paper"
+
 - id: lvkmreid
   title: "Human Re-ID Meets LVLMs: What can we expect?"
-  venue: arXiv, 2025
+  venue: "arXiv, 2025"
   description: "We compare the results due to ChatGPT-4o, Gemini-2.0-Flash, Claude 3.5 Sonnet, and Qwen-VL-Max to a baseline ReID PersonViT model, using the well-known Market1501 dataset."
   project_page: https://arxiv.org/abs/2501.18698
   arxiv: 2501.18698
   image: lvkmreid.jpg
-  image_mouseover: 
   authors:
     - kailashhambarde
     - pranitasamale
     - hugo
   awards:
-    - "Journal Paper"
-- id: fabricdefectsurvey
-  title: "Toward automated fabric defect detection: A survey of recent computer vision approaches"
-  venue: Electronics, 2024
-  description: "A survey of recent computer vision approaches."
-  project_page: https://www.mdpi.com/2079-9292/13/18/3728
-  arxiv: 0000.00000
-  image: fabricdefectsurvey.png
-  image_mouseover: 
-  authors:  
-    - ruicarrilho
-    - ehsanyaghoubi
-    - joselindo
-    - kailashhambarde
-    - hugo
-  awards:
-    - "Journal Paper"
+    - "Preprint"
+
 - id: quantumsupervised
   title: "A Laplacian-based Quantum Graph Neural Network for Semi-Supervised Learning"
-  venue: Quantum Information Processing, 2024
-  description: "This study investigates the performance of the Laplacian-based Quantum Semi-Supervised Learning (QSSL) method across four benchmark datasets -- Iris, Wine, Breast Cancer Wisconsin, and Heart Disease."
-  project_page: 
-  github: 
+  venue: "Quantum Information Processing, Vol. 24, No. 4, Article 106, Springer, 2025"
+  description: "This study investigates the performance of the Laplacian-based Quantum Semi-Supervised Learning (QSSL) method across four benchmark datasets."
+  project_page:
   arxiv: 2408.05498
   image: quantumsupervised.png
-  image_mouseover: 
   authors:
     - hamedgholipour
     - faridbozorgnia
@@ -46,32 +140,102 @@
     - andresequeira
     - joaoneves
     - hugo
+    - moharramchallenger
   awards:
     - "Journal Paper"
+
+# ---- 2024 ----
+- id: multimodalbiometric
+  title: "Multimodal Iris, Face and Fingerprint Biometric Fusion for Enhanced Person Identification Using Hybrid Deep Learning"
+  venue: "Applied Artificial Intelligence, 2AI 2024, Communications in Computer and Information Science vol. 2621, Springer, 2026"
+  description: "Hybrid deep learning approach for multimodal biometric fusion combining iris, face, and fingerprint modalities."
+  project_page: https://doi.org/10.1007/978-3-032-00793-3_16
+  arxiv:
+  image:
+  authors:
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Conference Paper"
+
+- id: vitvscnn
+  title: "Comparative Analysis of ViT (Vision Transformers) and Convolutional Neural Networks in Medical Imaging"
+  venue: "Portuguese Conference on Pattern Recognition (RECPAD), 2024"
+  description: "Comparative study of Vision Transformers versus CNNs for medical image analysis tasks."
+  project_page:
+  arxiv:
+  image:
+  authors:
+    - pranitasamale
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Conference Paper"
+
+- id: fabricfasterrcnn
+  title: "Comparative Analysis of Faster R-CNN and YOLOv7 for Automated Fabric Defect Detection"
+  venue: "Portuguese Conference on Pattern Recognition (RECPAD), 2024"
+  description: "Comparison of Faster R-CNN and YOLOv7 object detection frameworks for automated fabric defect detection."
+  project_page:
+  arxiv:
+  image:
+  authors:
+    - ruicarrilho
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Conference Paper"
+
+- id: fabricdefectsurvey
+  title: "Toward automated fabric defect detection: A survey of recent computer vision approaches"
+  venue: "Electronics, 2024"
+  description: "A survey of recent computer vision approaches for automated fabric defect detection."
+  project_page: https://www.mdpi.com/2079-9292/13/18/3728
+  arxiv:
+  image: fabricdefectsurvey.png
+  authors:
+    - ruicarrilho
+    - ehsanyaghoubi
+    - joselindo
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+
 - id: defectdetectiondataset
   title: "A novel dataset for fabric defect detection: bridging gaps in anomaly detection"
-  venue: Applied Sciences, 2024
-  description: "In this paper, we introduce a novel dataset comprising a diverse selection of fabrics and defects from a textile company based in Portugal."
+  venue: "Applied Sciences, 2024"
+  description: "A novel dataset comprising a diverse selection of fabrics and defects from a textile company based in Portugal."
   project_page: https://www.mdpi.com/2076-3417/14/12/5298
-  github:
-  arxiv: https://www.mdpi.com/2076-3417/14/12/5298
+  arxiv:
   image: defectdetectiondataset.jpg
-  image_mouseover: 
   authors:
     - ruicarrilho
     - kailashhambarde
     - hugo
   awards:
     - "Journal Paper"
+
+- id: imagebasedreid
+  title: "Image-based human re-identification: Which covariates are actually (the most) important?"
+  venue: "Image and Vision Computing, 2024"
+  description: "Analysis of subject features that provide the largest variations in re-identification performance."
+  project_page: https://www.sciencedirect.com/science/article/pii/S0262885624000209
+  arxiv:
+  image: imagebasedreid.jpg
+  authors:
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+
 - id: advmanufacturing
   title: "Advancing Manufacturing Energy Efficiency: The Role of AI and Web-Based Tools"
-  venue: ESCI, 2024
-  description: "We demonstrate the system's efficacy using a dataset from a textile company, where our application successfully predicted the target variables with a high level of R-squared of 0.78, using the best regression model."
+  venue: "ESCI 2024, IEEE"
+  description: "Demonstration of AI-based system for predicting manufacturing energy targets with R-squared of 0.78."
   project_page: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10497194"
-  github: 
-  arxiv: 
+  arxiv:
   image: advmanufacturing.png
-  image_mouseover: 
   authors:
     - asmaelamsaf
     - pranitasamale
@@ -79,53 +243,41 @@
     - joaoneves
     - kailashhambarde
   awards:
-    - "IEEE Conference Paper"
-- id: imagebasedreid
-  title: "Image-based human re-identification: Which covariates are actually (the most) important?"
-  venue: Image and Vision Computing, 2024
-  description: "We announce the results of an analysis about the subject features that provide the largest variations in re-id performance."
-  project_page: https://www.sciencedirect.com/science/article/pii/S0262885624000209
-  arxiv: 
-  github:
-  image: imagebasedreid.jpg
-  authors:
-    - kailashhambarde
-    - hugo
-  awards:
-    - "Journal Paper"
+    - "Conference Paper"
+
+# ---- 2023 ----
 - id: informationretrievalsurvey
   title: "Information retrieval: recent advances and beyond"
-  venue: IEEE Access, 2023
-  description: "We delve into the historical development of these models, analyze the key advancements and breakthroughs, and address the challenges and limitations faced by researchers and practitioners in the domain."
+  venue: "IEEE Access, 2023"
+  description: "Historical development of IR models, key advancements, and challenges in the domain."
   project_page: https://ieeexplore.ieee.org/abstract/document/10184013
-  arxiv: 
-  github:
+  arxiv:
   image: informationretrievalsurvey.jpg
   authors:
     - kailashhambarde
     - hugo
   awards:
     - "Journal Paper"
+
 - id: informationretrievalwsrr
   title: "WSRR: Weighted Rank-Relevance Sampling for Dense Text Retrieval"
-  venue: International Conference on Information and Communication Technology for Intelligent Systemsn, 2023
-  description: "n this paper we present a new approach for dense text retrieval (termed WRRS: Weighted Rank-Relevance Sampling) that addresses the limitations of current negative sampling strategies."
+  venue: "International Conference on Information and Communication Technology for Intelligent Systems, 2023"
+  description: "New approach for dense text retrieval addressing limitations of current negative sampling strategies."
   project_page: https://link.springer.com/chapter/10.1007/978-981-99-3758-5_22
-  arxiv: 
-  github:
+  arxiv:
   image: informationretrievalwsrr.jpg
   authors:
     - kailashhambarde
     - hugo
   awards:
-    - "Journal Paper"
+    - "Conference Paper"
+
 - id: covid19diagnosis
   title: "Diagnosis of Covid-19 via patient breath data using artificial intelligence"
-  venue: Emerging Science Journal, 2023
-  description: "This study aims to develop a point-of-care testing (POCT) system that can detect COVID-19 by detecting volatile organic compounds (VOCs) in a patient's exhaled breath using the Gradient Boosted Trees Learner Algorithm."
+  venue: "Emerging Science Journal, 2023"
+  description: "Point-of-care testing system detecting COVID-19 via volatile organic compounds in exhaled breath using Gradient Boosted Trees."
   project_page: https://ijournalse.org/index.php/ESJ/article/view/1411
   arxiv: 2302.10180
-  github:
   image: covid19diagnosis.jpg
   authors:
     - OzgeDoguc
@@ -136,15 +288,16 @@
     - HasanGokay
     - MesutYilmaz
   awards:
-    - "Journal Paper"  
+    - "Journal Paper"
+
+# ---- 2019–2020 ----
 - id: augmentationanalysis
   title: "Augmentation of behavioral analysis framework for E-commerce customers using MLP-based ANN"
-  venue: ICDSM, 2020
-  description: "The main objective is to hunt for classification of the customer’s behavior patterns. Artificial neural network (ANN) model was applied over customer’s dataset to forecast the customer’s purchasing patterns."
+  venue: "ICDSM, 2020"
+  description: "ANN model applied over customer datasets to forecast purchasing patterns."
   project_page: https://link.springer.com/chapter/10.1007/978-981-15-0978-0_4
-  arxiv: 
-  github:
-  image: augmentationanalysis.jpg
+  arxiv:
+  image:
   authors:
     - kailashhambarde
     - GokhanSilahtaroglu
@@ -155,14 +308,14 @@
     - govindkulkarni
   awards:
     - "Conference Paper"
+
 - id: dataanalytics
-  title: "Data analytics implemented over E-commerce data to evaluate performance of supervised learning approaches in relation to customer behavior."
-  venue: Soft Computing for Problem Solving, 2019
-  description: "This study has made an attempt for the implementation of data analytics over the shared data set of Turkey-based e-commerce company."
+  title: "Data analytics implemented over E-commerce data to evaluate performance of supervised learning approaches in relation to customer behavior"
+  venue: "Soft Computing for Problem Solving, 2019"
+  description: "Data analytics over Turkey-based e-commerce dataset evaluating supervised learning approaches."
   project_page: https://link.springer.com/chapter/10.1007/978-981-15-0035-0_22
-  arxiv: https://link.springer.com/chapter/10.1007/978-981-15-0035-0_22
-  github:
-  image: hypernerf_before.jpg
+  arxiv:
+  image:
   authors:
     - kailashhambarde
     - GokhanSilahtaroglu
@@ -174,14 +327,14 @@
     - pranitasamale
   awards:
     - "Conference Paper"
+
 - id: waterrecharge
   title: "Prediction of artificial water recharge sites using fusion of RS, GIS, AHP and GA Technologies"
-  venue: Advances in Data Science and Management Proceedings of ICDSM, 2019
-  description: "This paper narrates experimental setup for finding the most suitable area for artificial water recharge sites using a fusion of GIS, RS AHP, and GA technologies."
+  venue: "Advances in Data Science and Management, ICDSM 2019"
+  description: "Finding suitable areas for artificial water recharge using GIS, RS, AHP and GA technologies."
   project_page: https://link.springer.com/chapter/10.1007/978-981-15-0978-0_38
-  arxiv: https://link.springer.com/chapter/10.1007/978-981-15-0978-0_38
-  github:
-  image: hypernerf_before.jpg
+  arxiv:
+  image:
   authors:
     - husenshaikh
     - santoshkhamitkar
@@ -191,14 +344,14 @@
     - kailashhambarde
   awards:
     - "Conference Paper"
+
 - id: cropselection
-  title: "Comparative analysis of supervised machine learning algorithms for GIS-based crop selection prediction model."
-  venue: Computing and Network Sustainability Proceedings of IRSCNS, 2019
-  description: "This article deals with the comparative analysis of supervised machine learning algorithms for GIS-based crop selection prediction model (CSPM)."
+  title: "Comparative analysis of supervised machine learning algorithms for GIS-based crop selection prediction model"
+  venue: "Computing and Network Sustainability, IRSCNS 2018"
+  description: "Comparative analysis of supervised ML algorithms for GIS-based crop selection."
   project_page: https://link.springer.com/chapter/10.1007/978-981-13-7150-9_33
-  arxiv: https://link.springer.com/chapter/10.1007/978-981-13-7150-9_33
-  github:
-  image: hypernerf_before.jpg
+  arxiv:
+  image:
   authors:
     - pritamtamsekar
     - nileshdeshmukh
@@ -208,14 +361,14 @@
     - husenshaikh
   awards:
     - "Conference Paper"
+
 - id: architecturegis
-  title: "Architectural outline of GIS-based decision support system for crop selection."
-  venue: Smart Computing and Informatics, 2018
-  description: "For Indian farmers, the crop selection decision is a very crucial task as number of factors need to be taken into consideration. To drive out from this situation, a solution is proposed which apply analytic hierarchy process (AHP) and GIS in terms of a crop selection decision support system in Indian scenario."
+  title: "Architectural outline of GIS-based decision support system for crop selection"
+  venue: "Smart Computing and Informatics, SCI 2016"
+  description: "AHP and GIS-based crop selection decision support system for Indian farmers."
   project_page: https://link.springer.com/chapter/10.1007/978-981-10-5544-7_16
-  arxiv: https://link.springer.com/chapter/10.1007/978-981-10-5544-7_16
-  github:
-  image: hypernerf_before.jpg
+  arxiv:
+  image:
   authors:
     - pritamtamsekar
     - nileshdeshmukh
@@ -225,14 +378,14 @@
     - husenshaikh
   awards:
     - "Conference Paper"
+
 - id: decisioncrop
-  title: "Architectural outline of decision support system for crop selection using GIS and DM techniques."
-  venue: Computing and Network Sustainability Proceedings of IRSCNS, 2016
-  description: "The crucial task for Indian policy makers and farmers is the decision of crop selection by taking into consideration the various factors, which boosts the precision farming. To overcome this scenario, a decision support system is proposed by using GIS and DM techniques, which helps in deriving a pattern by associating various factors to enhance DSS to suggest potential crop for a region."
+  title: "Architectural outline of decision support system for crop selection using GIS and DM techniques"
+  venue: "Computing and Network Sustainability, IRSCNS 2016"
+  description: "Decision support system using GIS and DM techniques for precision farming in India."
   project_page: https://link.springer.com/chapter/10.1007/978-981-10-3935-5_11
-  arxiv: https://link.springer.com/chapter/10.1007/978-981-10-3935-5_11
-  github:
-  image: hypernerf_before.jpg
+  arxiv:
+  image:
   authors:
     - pritamtamsekar
     - nileshdeshmukh
@@ -242,14 +395,14 @@
     - husenshaikh
   awards:
     - "Conference Paper"
-- id: spatialpattern  
-  title: "Effective Use of GIS Based Spatial Pattern Technology for Urban Greenery Space Planning: A Case Study for Ganesh Nagar Area of Nanded City."
-  venue: Proceedings of 2nd International Conference on Intelligent Computing and Applications ICICA, 2015
-  description: "The proposed model acts as a decision support system for local government by providing suggestion of best suitable tree on particular location with their description to help the environment and human health."
+
+- id: spatialpattern
+  title: "Effective Use of GIS Based Spatial Pattern Technology for Urban Greenery Space Planning"
+  venue: "2nd International Conference on Intelligent Computing and Applications (ICICA 2015)"
+  description: "Decision support system for local government providing suggestions for tree placement based on GIS spatial pattern analysis."
   project_page: https://link.springer.com/chapter/10.1007/978-981-10-1645-5_11
-  arxiv: https://link.springer.com/chapter/10.1007/978-981-10-1645-5_11
-  github:
-  image: hypernerf_before.jpg
+  arxiv:
+  image:
   authors:
     - govindkulkarni
     - nileshdeshmukh
