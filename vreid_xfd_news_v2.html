@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VReID-XFD Workshop – News Post</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d0d0d;
+    --paper: #f5f1eb;
+    --accent: #c0392b;
+    --mid: #6b6560;
+    --rule: #c8c0b8;
+    --tag-bg: #1a1a2e;
+    --tag-fg: #e8d5b7;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.4;
+  }
+
+  .page-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 32px 80px;
+  }
+
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.1s ease forwards;
+  }
+  .masthead-rule { flex: 1; height: 1px; background: var(--ink); }
+  .masthead-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mid);
+    white-space: nowrap;
+  }
+
+  .category-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.2s ease forwards;
+  }
+  .badge {
+    background: var(--tag-bg);
+    color: var(--tag-fg);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+  }
+  .date-line { font-size: 12px; color: var(--mid); letter-spacing: 0.08em; }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(30px, 5vw, 52px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.3s ease forwards;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+
+  .deck {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #3a3530;
+    margin-bottom: 36px;
+    border-left: 3px solid var(--accent);
+    padding-left: 18px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.4s ease forwards;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 32px 0;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.45s ease forwards;
+  }
+  .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+  .divider-ornament { font-size: 14px; color: var(--rule); }
+
+  .body-text {
+    font-size: 16px;
+    line-height: 1.78;
+    color: #2a2520;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.5s ease forwards;
+  }
+  .body-text p { margin-bottom: 20px; }
+  .body-text strong { font-weight: 500; color: var(--ink); }
+
+  /* Organizers */
+  .organizers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 32px 0;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.52s ease forwards;
+  }
+  .org-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 22px 24px;
+    border-radius: 3px;
+  }
+  .org-role {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--tag-fg);
+    margin-bottom: 8px;
+  }
+  .org-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .org-detail {
+    font-size: 12px;
+    font-weight: 300;
+    color: #a09888;
+    line-height: 1.5;
+  }
+
+  /* Papers */
+  .papers-section {
+    margin: 36px 0;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.58s ease forwards;
+  }
+  .section-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+  .paper-list { display: flex; flex-direction: column; gap: 0; }
+
+  .paper-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .paper-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--rule);
+    line-height: 1;
+    padding-top: 2px;
+  }
+  .paper-content {}
+  .paper-title {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .paper-authors {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--mid);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .paper-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .paper-link {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 3px 9px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .paper-link:hover { background: var(--accent); color: #fff; }
+
+  /* CTA */
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 36px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.65s ease forwards;
+  }
+  .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .cta-link:hover { background: #a93226; transform: translateY(-1px); }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    opacity: 0;
+    animation: fadeUp 0.6s 0.7s ease forwards;
+  }
+  .tag {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid);
+    border: 1px solid var(--rule);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    .page-wrap { padding: 36px 18px 60px; }
+    .organizers { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="masthead">
+    <span class="masthead-label">Research &amp; Events</span>
+    <div class="masthead-rule"></div>
+    <span class="masthead-label">WACV 2026 · Open Access</span>
+  </div>
+
+  <div class="category-row">
+    <span class="badge">Workshop Report</span>
+    <span class="date-line">March 6, 2026 · Tucson, Arizona, USA</span>
+  </div>
+
+  <h1>The <em>VReID-XFD</em> Workshop at WACV 2026 is a Wrap</h1>
+
+  <p class="deck">
+    The 1st Workshop on Video-based Human Recognition at Extreme Far Distances successfully concluded at WACV 2026 — organised by Kailash A. Hambarde and Hugo Proença from Instituto de Telecomunicações &amp; UBI, Portugal. Papers are now openly available.
+  </p>
+
+  <div class="divider"><span class="divider-ornament">✦</span></div>
+
+  <div class="body-text">
+    <p>
+      The <strong>VReID-XFD workshop</strong> brought together researchers tackling one of computer vision's most demanding open problems: reliably identifying people from video captured at extreme distances, under degraded conditions, across clothing changes and challenging UAV viewpoints.
+    </p>
+    <p>
+      The half-day programme at WACV 2026 paired an archival paper track with the <strong>DetReIDX Challenge</strong> — a competition with hidden-label evaluation that attracted teams presenting a diverse set of approaches, from scale-adaptive re-identification frameworks to CLIP-guided aerial-ground matching and super-resolution pipelines. All papers are now freely accessible via IEEE Xplore and CVF Open Access.
+    </p>
+  </div>
+
+  <div class="organizers">
+    <div class="org-card">
+      <div class="org-role">Lead Organiser</div>
+      <div class="org-name">Kailash A. Hambarde</div>
+      <div class="org-detail">Researcher<br>Instituto de Telecomunicações &amp; UBI<br>Covilhã, Portugal</div>
+    </div>
+    <div class="org-card">
+      <div class="org-role">Lead Organiser</div>
+      <div class="org-name">Hugo Proença</div>
+      <div class="org-detail">Full Professor · Senior Researcher<br>Pattern &amp; Image Analysis Group<br>University of Beira Interior</div>
+    </div>
+  </div>
+
+  <div class="papers-section">
+    <div class="section-label">Accepted Papers</div>
+    <div class="paper-list">
+
+      <div class="paper-item">
+        <div class="paper-num">1</div>
+        <div class="paper-content">
+          <div class="paper-title">SAS-VPReID: A Scale-Adaptive Framework with Shape Priors for Video-based Person Re-Identification at Extreme Far Distances</div>
+          <div class="paper-authors">Qiwei Yang, Pingping Zhang, Yuhao Wang, Zijing Gong</div>
+          <div class="paper-links">
+            <a class="paper-link" href="https://openaccess.thecvf.com/WACV2026_workshops/VReID-XFD" target="_blank">PDF</a>
+            <a class="paper-link" href="https://arxiv.org" target="_blank">arXiv</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper-item">
+        <div class="paper-num">2</div>
+        <div class="paper-content">
+          <div class="paper-title">EAGLE-ReID: Strategic Alignment and Delta Consistency for Extreme Far-Distance Aerial-Ground Re-Identification</div>
+          <div class="paper-authors">Cheng-Jun Kang, Jin-Hui Jiang, Yu-Fan Lin, Chih-Chung Hsu</div>
+          <div class="paper-links">
+            <a class="paper-link" href="https://openaccess.thecvf.com/WACV2026_workshops/VReID-XFD" target="_blank">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper-item">
+        <div class="paper-num">3</div>
+        <div class="paper-content">
+          <div class="paper-title">VReID-XFD: Video-based Person Re-identification at Extreme Far Distance Challenge Results</div>
+          <div class="paper-authors">Kailash A. Hambarde, Hugo Proença, Md Rashidunnabi, Pranita Samale, Qiwei Yang, Pingping Zhang, Zijing Gong, Yuhao Wang, Xi Zhang, Ruoshui Qu, Qiaoyun He, Yuhang Zhang, Thi Ngoc Ha Nguyen, Tien-Dung Mai, Cheng-Jun Kang, Yu-Fan Lin, Jin-Hui Jiang, Chih-Chung Hsu, Tamás Endrei, György Cserey, Ashwat Rajbhandari</div>
+          <div class="paper-links">
+            <a class="paper-link" href="https://openaccess.thecvf.com/WACV2026_workshops/VReID-XFD" target="_blank">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper-item">
+        <div class="paper-num">4</div>
+        <div class="paper-content">
+          <div class="paper-title">Enhancing Aerial-Ground Video Person Re-Identification via DFGS-Guided CLIP Sampling and Inference-Time Uncertainty-Aware Fusion</div>
+          <div class="paper-authors">Thi Ngoc Ha Nguyen, Tien-Dung Mai</div>
+          <div class="paper-links">
+            <a class="paper-link" href="https://openaccess.thecvf.com/WACV2026_workshops/VReID-XFD" target="_blank">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper-item">
+        <div class="paper-num">5</div>
+        <div class="paper-content">
+          <div class="paper-title">S3-CLIP: Video Super Resolution for Person-ReID</div>
+          <div class="paper-authors">Tamás Endrei, György Cserey</div>
+          <div class="paper-links">
+            <a class="paper-link" href="https://openaccess.thecvf.com/WACV2026_workshops/VReID-XFD" target="_blank">PDF</a>
+            <a class="paper-link" href="https://arxiv.org" target="_blank">arXiv</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="body-text">
+    <p>
+      Congratulations to all authors and competition participants. A big thank you to everyone who contributed to reviewing, organising, and competing — your effort made this workshop a meaningful addition to the WACV 2026 programme. The proceedings are available open access via CVF, freely accessible to the entire research community.
+    </p>
+  </div>
+
+  <div class="cta-row">
+    <a class="cta-link" href="https://lnkd.in/eb-mKKiB" target="_blank" rel="noopener">
+      Browse All Papers ↗
+    </a>
+  </div>
+
+  <div class="tags">
+    <span class="tag">Computer Vision</span>
+    <span class="tag">Re-Identification</span>
+    <span class="tag">UAV Analytics</span>
+    <span class="tag">WACV 2026</span>
+    <span class="tag">CVF Open Access</span>
+    <span class="tag">DetReIDX</span>
+    <span class="tag">Deep Learning</span>
+  </div>
+
+</div>
+</body>
+</html>
