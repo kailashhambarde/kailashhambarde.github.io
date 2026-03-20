@@ -126,9 +126,9 @@ layout: null
       <h2 class="section-heading">Publications</h2>
 
       {% for pub in site.data.publications %}
-      <div class="pub-block columns">
+      <div class="pub-block">
 
-        <div class="column is-3">
+        <div class="pub-thumb-wrap">
           <div class="pub-thumb">
             {% if pub.image %}
             <img src="./images/{{ pub.image }}" alt="{{ pub.title }}"
@@ -144,7 +144,7 @@ layout: null
           </div>
         </div>
 
-        <div class="column">
+        <div class="pub-body">
           <h3 class="pub-title">
             {% if pub.project_page %}
             <a href="{{ pub.project_page }}" target="_blank">{{ pub.title }}</a>
@@ -172,8 +172,6 @@ layout: null
             <span class="pub-badge">{{ award }}</span>
             {% endfor %}
           </div>
-
-          <p class="pub-desc">{{ pub.description }}</p>
 
           <div class="pub-links">
             {% if pub.project_page %}
@@ -300,7 +298,7 @@ layout: null
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           e.preventDefault();
-          const offset = 70;
+          const offset = 58;
           const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
           window.scrollTo({ top, behavior: 'smooth' });
         }
