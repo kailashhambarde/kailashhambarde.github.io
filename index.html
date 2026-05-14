@@ -48,7 +48,6 @@ layout: null
       </button>
       <div class="nav-links" id="navLinks">
         <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#research">Research</a>
         <a class="nav-link" href="#news">News</a>
         <a class="nav-link" href="#blog">Blog</a>
         <a class="nav-link" href="#publications">Publications</a>
@@ -113,29 +112,6 @@ layout: null
   </section>
 
   <!-- ===== RESEARCH INTERESTS ===== -->
-  <section id="research" class="content-section">
-    <div class="container is-max-desktop">
-      <h2 class="section-heading">Research</h2>
-      <div class="research-grid">
-        <article class="research-card">
-          <div class="research-icon"><i class="fas fa-user-shield"></i></div>
-          <h3>Person Re-Identification</h3>
-          <p>Cross-view and long-range recognition for surveillance, UAV imagery, and video-based biometric systems.</p>
-        </article>
-        <article class="research-card">
-          <div class="research-icon"><i class="fas fa-eye"></i></div>
-          <h3>Computer Vision</h3>
-          <p>Visual representation learning for real-world image analysis, including defects, covariates, and robust recognition.</p>
-        </article>
-        <article class="research-card">
-          <div class="research-icon"><i class="fas fa-project-diagram"></i></div>
-          <h3>Data Science</h3>
-          <p>Applied machine learning, causal analysis, and intelligent data systems for biomedical and industrial domains.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== NEWS ===== -->
   <section id="news" class="content-section alt-bg">
     <div class="container is-max-desktop">
@@ -155,7 +131,7 @@ layout: null
   <section id="blog" class="content-section">
     <div class="container is-max-desktop">
       <div class="section-title-row">
-        <h2 class="section-heading">Blog</h2>
+        <h2 class="section-heading">{{ site.data.blog.title }}</h2>
         <a class="section-action" href="{{ '/blog/' | relative_url }}">All posts <i class="fas fa-arrow-right"></i></a>
       </div>
 

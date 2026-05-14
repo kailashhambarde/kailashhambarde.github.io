@@ -4,16 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
-  <title>{{ page.title }} — {{ site.name }}</title>
+  <meta name="description" content="This blog will collect short notes from my research work in computer vision, person re-identification, and applied machine learning.
+">
+  <title>Starting a Research Blog — Kailash A. Hambarde</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
-  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
+  <link href="/css/fontawesome.all.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
-  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
-  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
-  {% if page.math != false %}
+  <link href="/css/bulma.min.css" rel="stylesheet">
+  <link href="/css/index.css" rel="stylesheet">
+  <script defer src="/js/fontawesome.all.min.js"></script>
+  
   <script>
     window.MathJax = {
       tex: {
@@ -24,23 +25,23 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-  {% endif %}
+  
 </head>
 
 <body>
   <nav class="topnav scrolled" id="topnav">
     <div class="container is-max-desktop topnav-inner">
-      <a class="topnav-brand" href="{{ '/' | relative_url }}">KH</a>
+      <a class="topnav-brand" href="/">KH</a>
       <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
       <div class="nav-links" id="navLinks">
-        <a class="nav-link" href="{{ '/#about' | relative_url }}">About</a>
-        <a class="nav-link" href="{{ '/#news' | relative_url }}">News</a>
-        <a class="nav-link active" href="{{ '/blog/' | relative_url }}">Blog</a>
-        <a class="nav-link" href="{{ '/#publications' | relative_url }}">Publications</a>
-        <a class="nav-link" href="{{ '/#contact' | relative_url }}">Contact</a>
-        <a class="nav-link nav-cv" href="{{ '/cv.html' | relative_url }}"><i class="fas fa-file-alt"></i> CV</a>
+        <a class="nav-link" href="/#about">About</a>
+        <a class="nav-link" href="/#news">News</a>
+        <a class="nav-link active" href="/blog/">Blog</a>
+        <a class="nav-link" href="/#publications">Publications</a>
+        <a class="nav-link" href="/#contact">Contact</a>
+        <a class="nav-link nav-cv" href="/cv.html"><i class="fas fa-file-alt"></i> CV</a>
       </div>
     </div>
   </nav>
@@ -49,34 +50,48 @@
     <article class="container is-max-desktop post-article">
       <header class="page-header">
         <p class="page-kicker">Blog</p>
-        <h1>{{ page.title }}</h1>
+        <h1>Starting a Research Blog</h1>
         <div class="blog-meta">
-          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
-          {% if page.reading_time %}<span>{{ page.reading_time }}</span>{% endif %}
+          <time datetime="2026-05-14T00:00:00+01:00">May 14, 2026</time>
+          <span>2 min read</span>
         </div>
-        {% if page.tags %}
+        
         <div class="tag-list">
-          {% for tag in page.tags %}
-          <span>{{ tag }}</span>
-          {% endfor %}
+          
+          <span>research</span>
+          
+          <span>computer-vision</span>
+          
+          <span>person-re-identification</span>
+          
         </div>
-        {% endif %}
+        
       </header>
 
       <div class="post-content">
-        {{ content }}
+        <p>This blog will collect short notes from my research work in computer vision, person re-identification, and applied machine learning.</p>
+
+<p>I plan to use this space for practical reflections that do not always fit into a paper: dataset lessons, experimental design notes, reading lists, challenge summaries, and implementation details from projects involving aerial-ground video, extreme-distance recognition, and robust visual analysis.</p>
+
+<p>The first goal is simple: keep useful research thinking visible, searchable, and easy to share.</p>
+
       </div>
 
-      {% include comments.html %}
+      
 
-      <p class="post-back"><a href="{{ '/blog/' | relative_url }}"><i class="fas fa-arrow-left"></i> Back to blog</a></p>
+
+
+
+
+
+      <p class="post-back"><a href="/blog/"><i class="fas fa-arrow-left"></i> Back to blog</a></p>
     </article>
   </main>
 
   <footer class="site-footer">
     <div class="container is-max-desktop">
       <div class="footer-inner">
-        <p class="footer-copy">&copy; <span id="current-year"></span> {{ site.name }}</p>
+        <p class="footer-copy">&copy; <span id="current-year"></span> Kailash A. Hambarde</p>
         <p class="footer-note">Researcher · Instituto de Telecomunicações · University of Beira Interior</p>
       </div>
     </div>

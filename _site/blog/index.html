@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Blog posts by Kailash A. Hambarde on computer vision, person re-identification, and applied machine learning.">
+  <title>Blog — Kailash A. Hambarde</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+  <link href="/css/fontawesome.all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+  <link href="/css/bulma.min.css" rel="stylesheet">
+  <link href="/css/index.css" rel="stylesheet">
+  <script defer src="/js/fontawesome.all.min.js"></script>
+</head>
+
+<body>
+  <nav class="topnav scrolled" id="topnav">
+    <div class="container is-max-desktop topnav-inner">
+      <a class="topnav-brand" href="/">KH</a>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link" href="/#about">About</a>
+        <a class="nav-link" href="/#news">News</a>
+        <a class="nav-link active" href="/blog/">Blog</a>
+        <a class="nav-link" href="/#publications">Publications</a>
+        <a class="nav-link" href="/#contact">Contact</a>
+        <a class="nav-link nav-cv" href="/cv.html"><i class="fas fa-file-alt"></i> CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-shell">
+    <div class="container is-max-desktop">
+      <header class="page-header">
+        <p class="page-kicker">Writing</p>
+        <h1>Blog</h1>
+        <p>Notes on computer vision, person re-identification, research workflows, and lessons from applied machine learning projects.</p>
+      </header>
+
+      <section class="blog-index" aria-label="Blog posts">
+        
+        <article class="blog-index-item">
+          <div class="blog-meta">
+            <time datetime="2026-05-14T00:00:00+01:00">May 14, 2026</time>
+            <span>2 min read</span>
+          </div>
+          <h2><a href="/2026/05/14/welcome-to-the-blog.html">Starting a Research Blog</a></h2>
+          
+          <p>This blog will collect short notes from my research work in computer vision, person re-identification, and applied machine learning.
+</p>
+          
+          
+          <div class="tag-list">
+            
+            <span>research</span>
+            
+            <span>computer-vision</span>
+            
+            <span>person-re-identification</span>
+            
+          </div>
+          
+        </article>
+        
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container is-max-desktop">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; <span id="current-year"></span> Kailash A. Hambarde</p>
+        <p class="footer-note">Researcher · Instituto de Telecomunicações · University of Beira Interior</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    const burger = document.getElementById('navBurger');
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('is-open');
+      burger.classList.toggle('is-active');
+    });
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        burger.classList.remove('is-active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -29,7 +29,6 @@ title: Blog
       </button>
       <div class="nav-links" id="navLinks">
         <a class="nav-link" href="{{ '/#about' | relative_url }}">About</a>
-        <a class="nav-link" href="{{ '/#research' | relative_url }}">Research</a>
         <a class="nav-link" href="{{ '/#news' | relative_url }}">News</a>
         <a class="nav-link active" href="{{ '/blog/' | relative_url }}">Blog</a>
         <a class="nav-link" href="{{ '/#publications' | relative_url }}">Publications</a>
@@ -42,9 +41,9 @@ title: Blog
   <main class="page-shell">
     <div class="container is-max-desktop">
       <header class="page-header">
-        <p class="page-kicker">Writing</p>
-        <h1>Blog</h1>
-        <p>Notes on computer vision, person re-identification, research workflows, and lessons from applied machine learning projects.</p>
+        <p class="page-kicker">{{ site.data.blog.kicker }}</p>
+        <h1>{{ site.data.blog.title }}</h1>
+        <p>{{ site.data.blog.description }}</p>
       </header>
 
       <section class="blog-index" aria-label="Blog posts">

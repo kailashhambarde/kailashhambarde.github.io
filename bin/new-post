@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "date"
+require "fileutils"
+
+title = ARGV.join(" ").strip
+if title.empty?
+  warn 'Usage: bin/new-post "Post title"'
+  exit 1
+end
+
+date = Date.today.strftime("%Y-%m-%d")
+slug = title.downcase
+            .gsub(/[^a-z0-9]+/, "-")
+            .gsub(/\A-|-+\z/, "")
+filename = File.join("_posts", "#{date}-#{slug}.md")
+
+if File.exist?(filename)
+  warn "Post already exists: #{filename}"
+  exit 1
+end
+
+FileUtils.mkdir_p("_posts")
+
+content = <<~MARKDOWN
+  ---
+  title: "#{title.gsub('"', '\"')}"
+  date: #{date}
+  reading_time: "3 min read"
+  tags:
+    - research
+  comments: true
+  math: true
+  ---
+
+  Write your post here in Markdown.
+
+  ## Notes
+
+  Start with the main idea, then add details, links, images, or code.
+MARKDOWN
+
+File.write(filename, content)
+puts "Created #{filename}"

@@ -1,0 +1,6 @@
+<figure class="post-media">
+  <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.caption | default: 'Blog image' }}">
+  {% if include.caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

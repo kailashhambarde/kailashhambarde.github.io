@@ -3,6 +3,7 @@ layout: post
 title: "Starting a Research Blog"
 date: 2026-05-14
 reading_time: "2 min read"
+comments: true
 tags:
   - research
   - computer-vision

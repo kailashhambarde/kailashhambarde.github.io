@@ -25,5 +25,18 @@ theme: minima
 plugins:
   - jekyll-feed
 
+exclude:
+  - bin
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      math: true
+
 sass:
   style: compact
