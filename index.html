@@ -50,6 +50,7 @@ layout: null
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#research">Research</a>
         <a class="nav-link" href="#news">News</a>
+        <a class="nav-link" href="#blog">Blog</a>
         <a class="nav-link" href="#publications">Publications</a>
         <a class="nav-link" href="#contact">Contact</a>
         <a class="nav-link nav-cv" href="cv.html"><i class="fas fa-file-alt"></i> CV</a>
@@ -81,6 +82,13 @@ layout: null
             </div>
           </div>
 
+          <div class="about-bio">
+            <p>
+              I work on computer vision, biometric recognition, person re-identification, and machine learning systems
+              that stay reliable in unconstrained visual conditions, including aerial-ground and extreme-distance scenarios.
+            </p>
+          </div>
+
           <div class="about-buttons">
             <a class="about-btn" href="cv.html">
               <i class="fas fa-file-alt"></i> CV
@@ -105,8 +113,31 @@ layout: null
   </section>
 
   <!-- ===== RESEARCH INTERESTS ===== -->
+  <section id="research" class="content-section">
+    <div class="container is-max-desktop">
+      <h2 class="section-heading">Research</h2>
+      <div class="research-grid">
+        <article class="research-card">
+          <div class="research-icon"><i class="fas fa-user-shield"></i></div>
+          <h3>Person Re-Identification</h3>
+          <p>Cross-view and long-range recognition for surveillance, UAV imagery, and video-based biometric systems.</p>
+        </article>
+        <article class="research-card">
+          <div class="research-icon"><i class="fas fa-eye"></i></div>
+          <h3>Computer Vision</h3>
+          <p>Visual representation learning for real-world image analysis, including defects, covariates, and robust recognition.</p>
+        </article>
+        <article class="research-card">
+          <div class="research-icon"><i class="fas fa-project-diagram"></i></div>
+          <h3>Data Science</h3>
+          <p>Applied machine learning, causal analysis, and intelligent data systems for biomedical and industrial domains.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== NEWS ===== -->
-  <section id="news" class="content-section">
+  <section id="news" class="content-section alt-bg">
     <div class="container is-max-desktop">
       <h2 class="section-heading">News</h2>
       <div class="news-list">
@@ -115,6 +146,38 @@ layout: null
           <span class="news-date">{{ item.date }}</span>
           <span class="news-body">{{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}</span>
         </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG ===== -->
+  <section id="blog" class="content-section">
+    <div class="container is-max-desktop">
+      <div class="section-title-row">
+        <h2 class="section-heading">Blog</h2>
+        <a class="section-action" href="{{ '/blog/' | relative_url }}">All posts <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="blog-preview-list">
+        {% for post in site.posts limit:3 %}
+        <article class="blog-preview">
+          <div class="blog-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+            {% if post.reading_time %}<span>{{ post.reading_time }}</span>{% endif %}
+          </div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          {% if post.excerpt %}
+          <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+          {% endif %}
+          {% if post.tags %}
+          <div class="tag-list">
+            {% for tag in post.tags limit:4 %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </article>
         {% endfor %}
       </div>
     </div>
