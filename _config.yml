@@ -26,8 +26,18 @@ plugins:
   - jekyll-feed
 
 exclude:
+  - .bundle
+  - .DS_Store
+  - .github
+  - .idea
+  - .jekyll-cache
+  - .vscode
   - bin
+  - Gemfile
+  - Gemfile.lock
   - README.md
+  - vendor
+  - vendor/bundle
 
 defaults:
   - scope:
