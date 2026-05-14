@@ -80,6 +80,41 @@
       
 
 
+<section class="post-actions" aria-label="Post actions">
+  <div class="post-actions-primary">
+    <a class="post-action-btn" href="#comments">
+      <i class="far fa-thumbs-up"></i>
+      <span>Like</span>
+    </a>
+    <a class="post-action-btn" href="#comments">
+      <i class="far fa-comment"></i>
+      <span>Comment</span>
+    </a>
+  </div>
+  <div class="post-share">
+    <span>Share</span>
+    <a class="post-action-btn" href="https://twitter.com/intent/tweet?url=https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog.html&text=Starting%20a%20Research%20Blog" target="_blank" rel="noopener">
+      <i class="fab fa-twitter"></i>
+      <span>X/Twitter</span>
+    </a>
+    <a class="post-action-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog.html" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+    <a class="post-action-btn" href="mailto:?subject=Starting%20a%20Research%20Blog&body=https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog.html">
+      <i class="fas fa-envelope"></i>
+      <span>Email</span>
+    </a>
+    <button class="post-action-btn post-copy-link" type="button" data-url="https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog.html">
+      <i class="far fa-copy"></i>
+      <span>Copy link</span>
+    </button>
+  </div>
+</section>
+
+      
+
+
 
 
 
@@ -109,6 +144,16 @@
       link.addEventListener('click', () => {
         navLinks.classList.remove('is-open');
         burger.classList.remove('is-active');
+      });
+    });
+    document.querySelectorAll('.post-copy-link').forEach(button => {
+      button.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(button.dataset.url);
+          button.querySelector('span').textContent = 'Copied';
+        } catch (error) {
+          button.querySelector('span').textContent = 'Copy failed';
+        }
       });
     });
   </script>

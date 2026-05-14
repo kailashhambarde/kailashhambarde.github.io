@@ -172,6 +172,16 @@ a:hover { color: #1e40af; text-decoration: underline; }
 
 .mjx-container { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 
+.post-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 2rem; padding: 1rem 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
+
+.post-actions-primary, .post-share { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; }
+
+.post-share > span { color: #9ca3af; font-size: 0.78rem; font-weight: 700; margin-right: 0.2rem; }
+
+.post-action-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; min-height: 34px; padding: 0.35rem 0.7rem; border: 1px solid #e5e7eb; border-radius: 6px; background: #ffffff; color: #4b5563; font-family: inherit; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+
+.post-action-btn:hover { border-color: #2563eb; background: #eff6ff; color: #2563eb; text-decoration: none; }
+
 .post-back { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; font-size: 0.85rem; font-weight: 600; }
 
 .post-comments { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid #e5e7eb; }

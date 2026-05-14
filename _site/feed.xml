@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://kailashhambarde.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kailashhambarde.github.io/" rel="alternate" type="text/html" /><updated>2026-05-14T22:46:59+01:00</updated><id>https://kailashhambarde.github.io/feed.xml</id><title type="html">Kailash A. Hambarde</title><subtitle>My research focuses on computer vision, person re-identification, and deep learning.</subtitle><entry><title type="html">Starting a Research Blog</title><link href="https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog.html" rel="alternate" type="text/html" title="Starting a Research Blog" /><published>2026-05-14T00:00:00+01:00</published><updated>2026-05-14T00:00:00+01:00</updated><id>https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog</id><content type="html" xml:base="https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog.html"><![CDATA[<p>This blog will collect short notes from my research work in computer vision, person re-identification, and applied machine learning.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://kailashhambarde.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kailashhambarde.github.io/" rel="alternate" type="text/html" /><updated>2026-05-14T23:07:08+01:00</updated><id>https://kailashhambarde.github.io/feed.xml</id><title type="html">Kailash A. Hambarde</title><subtitle>My research focuses on computer vision, person re-identification, and deep learning.</subtitle><entry><title type="html">CityAVOS: A Step Toward Fully Autonomous UAV Visual Search</title><link href="https://kailashhambarde.github.io/2026/05/14/cityavos-autonomous-uav-visual-search.html" rel="alternate" type="text/html" title="CityAVOS: A Step Toward Fully Autonomous UAV Visual Search" /><published>2026-05-14T00:00:00+01:00</published><updated>2026-05-14T00:00:00+01:00</updated><id>https://kailashhambarde.github.io/2026/05/14/cityavos-autonomous-uav-visual-search</id><content type="html" xml:base="https://kailashhambarde.github.io/2026/05/14/cityavos-autonomous-uav-visual-search.html"><![CDATA[<p>I found this paper interesting because it touches a core problem for fully autonomous UAVs: how can a drone search for a visual target in a large, unfamiliar city without GPS-style task hints, hand-written routes, or human guidance?</p>
+
+<p>The paper, <strong>“Towards Autonomous UAV Visual Object Search in City Space: Benchmark and Agentic Methodology”</strong>, introduces <strong>CityAVOS</strong>, a benchmark for aerial visual object search in urban environments, and <strong>PRPSearcher</strong>, an agentic method that combines perception, reasoning, and planning with multimodal large language models.</p>
+
+<figure class="post-media">
+  <img src="/images/blog/cityavos/cityavos-task-example.png" alt="Example of the CityAVOS UAV visual object search task" />
+  
+  <figcaption>A UAV must search for a visual object in an unfamiliar city scene by balancing exploration with target-driven exploitation.</figcaption>
+  
+</figure>
+
+<p>What makes this problem important is that urban UAV autonomy is not only about avoiding obstacles or following waypoints. A real autonomous UAV should understand the city visually: shops, signs, vehicles, buildings, facilities, and the contextual cues around them. If the target is a particular storefront or car, the drone needs to reason about where such an object is likely to appear and when it should keep exploring unknown space.</p>
+
+<figure class="post-media">
+  <img src="/images/blog/cityavos/cityavos-dataset.png" alt="CityAVOS object categories and dataset statistics" />
+  
+  <figcaption>CityAVOS covers six common urban object categories and separates tasks into easy and hard search settings.</figcaption>
+  
+</figure>
+
+<p>The strongest idea in the paper is the separation of the agent into three linked maps:</p>
+
+<ul>
+  <li>an <strong>object-centric semantic map</strong> for what the UAV sees,</li>
+  <li>a <strong>cognitive map</strong> that estimates where the target is likely to be,</li>
+  <li>an <strong>uncertainty map</strong> that tracks what parts of the city remain unexplored.</li>
+</ul>
+
+<p>This is close to how a human searches: first understand the scene, then guess likely target areas, then deliberately inspect places that remain uncertain.</p>
+
+<figure class="post-media">
+  <img src="/images/blog/cityavos/prpsearcher-overview.png" alt="Overview of PRPSearcher for UAV visual object search" />
+  
+  <figcaption>PRPSearcher connects spatial perception, target reasoning, and action planning into one UAV search loop.</figcaption>
+  
+</figure>
+
+<p>I especially like the exploration-exploitation framing. If a UAV only follows the most likely semantic clue, it may miss the target hidden behind another structure. If it only explores unknown areas, it wastes time. PRPSearcher tries to switch between both modes by using uncertainty as a kind of prompt-level inspiration for planning.</p>
+
+<p>The results are also encouraging. On CityAVOS, PRPSearcher improves over several baselines in success rate, path efficiency, mean search steps, and navigation error. It is still below human performance, but that gap is useful: it shows the benchmark is not saturated and can push future work in embodied AI, UAV navigation, and visual reasoning.</p>
+
+<figure class="post-media">
+  <img src="/images/blog/cityavos/prpsearcher-case-study.png" alt="PRPSearcher successful and failed UAV visual search cases" />
+  
+  <figcaption>The case study shows both the promise and the difficulty: richer object context helps, while sparse cues can still lead the UAV into inefficient search.</figcaption>
+  
+</figure>
+
+<p>For me, the big takeaway is that fully autonomous UAVs will need more than perception models. They need memory, uncertainty, world knowledge, target-specific reasoning, and planning that adapts during flight. CityAVOS is valuable because it turns that need into a measurable benchmark.</p>
+
+<p>This direction feels very relevant for future UAV systems in search-and-rescue, inspection, delivery, and urban monitoring: the drone should not only fly; it should know how to look.</p>]]></content><author><name></name></author><category term="uav" /><category term="embodied-ai" /><category term="computer-vision" /><category term="visual-search" /><summary type="html"><![CDATA[I found this paper interesting because it touches a core problem for fully autonomous UAVs: how can a drone search for a visual target in a large, unfamiliar city without GPS-style task hints, hand-written routes, or human guidance?]]></summary></entry><entry><title type="html">Starting a Research Blog</title><link href="https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog.html" rel="alternate" type="text/html" title="Starting a Research Blog" /><published>2026-05-14T00:00:00+01:00</published><updated>2026-05-14T00:00:00+01:00</updated><id>https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog</id><content type="html" xml:base="https://kailashhambarde.github.io/2026/05/14/welcome-to-the-blog.html"><![CDATA[<p>This blog will collect short notes from my research work in computer vision, person re-identification, and applied machine learning.</p>
 
 <p>I plan to use this space for practical reflections that do not always fit into a paper: dataset lessons, experimental design notes, reading lists, challenge summaries, and implementation details from projects involving aerial-ground video, extreme-distance recognition, and robust visual analysis.</p>
 

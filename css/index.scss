@@ -556,6 +556,58 @@ a {
   max-width: 100%;
 }
 
+.post-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+}
+
+.post-actions-primary,
+.post-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.post-share > span {
+  color: $light;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-right: 0.2rem;
+}
+
+.post-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 34px;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid $border;
+  border-radius: 6px;
+  background: $bg;
+  color: $mid;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover {
+    border-color: $primary;
+    background: $primary-light;
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
 .post-back {
   margin-top: 2rem;
   padding-top: 1rem;

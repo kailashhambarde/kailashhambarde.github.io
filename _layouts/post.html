@@ -67,6 +67,7 @@
         {{ content }}
       </div>
 
+      {% include post-actions.html %}
       {% include comments.html %}
 
       <p class="post-back"><a href="{{ '/blog/' | relative_url }}"><i class="fas fa-arrow-left"></i> Back to blog</a></p>
@@ -94,6 +95,16 @@
       link.addEventListener('click', () => {
         navLinks.classList.remove('is-open');
         burger.classList.remove('is-active');
+      });
+    });
+    document.querySelectorAll('.post-copy-link').forEach(button => {
+      button.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(button.dataset.url);
+          button.querySelector('span').textContent = 'Copied';
+        } catch (error) {
+          button.querySelector('span').textContent = 'Copy failed';
+        }
       });
     });
   </script>

@@ -1,0 +1,34 @@
+{% assign post_url = page.url | absolute_url %}
+{% assign post_title = page.title | uri_escape %}
+
+<section class="post-actions" aria-label="Post actions">
+  <div class="post-actions-primary">
+    <a class="post-action-btn" href="#comments">
+      <i class="far fa-thumbs-up"></i>
+      <span>Like</span>
+    </a>
+    <a class="post-action-btn" href="#comments">
+      <i class="far fa-comment"></i>
+      <span>Comment</span>
+    </a>
+  </div>
+  <div class="post-share">
+    <span>Share</span>
+    <a class="post-action-btn" href="https://twitter.com/intent/tweet?url={{ post_url | uri_escape }}&text={{ post_title }}" target="_blank" rel="noopener">
+      <i class="fab fa-twitter"></i>
+      <span>X/Twitter</span>
+    </a>
+    <a class="post-action-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ post_url | uri_escape }}" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+    <a class="post-action-btn" href="mailto:?subject={{ post_title }}&body={{ post_url | uri_escape }}">
+      <i class="fas fa-envelope"></i>
+      <span>Email</span>
+    </a>
+    <button class="post-action-btn post-copy-link" type="button" data-url="{{ post_url }}">
+      <i class="far fa-copy"></i>
+      <span>Copy link</span>
+    </button>
+  </div>
+</section>

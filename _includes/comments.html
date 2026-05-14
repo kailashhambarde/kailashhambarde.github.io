@@ -3,7 +3,7 @@
 {% assign giscus = comments.giscus %}
 
 {% if comments.enabled and comments.provider == "giscus" and page.comments != false and giscus.repo != "" and giscus.repo_id != "" and giscus.category_id != "" %}
-<section class="post-comments" aria-label="Comments and reactions">
+<section class="post-comments" id="comments" aria-label="Comments and reactions">
   <h2>Comments</h2>
   <script src="https://giscus.app/client.js"
           data-repo="{{ giscus.repo }}"
