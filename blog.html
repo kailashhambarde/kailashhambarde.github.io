@@ -9,8 +9,34 @@ title: Blog
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Blog posts by {{ site.name }} on computer vision, person re-identification, and applied machine learning.">
-  <title>Blog — {{ site.name }}</title>
+
+  <!-- Primary SEO -->
+  <title>Blog — {{ site.name }} | Computer Vision & Machine Learning</title>
+  <meta name="description" content="Blog by {{ site.name }}: articles on computer vision, person re-identification, biometric recognition, UAV-based perception, and applied deep learning research.">
+  <meta name="keywords" content="computer vision blog, person re-identification, deep learning, biometric recognition, machine learning research, Kailash Hambarde">
+  <meta name="author" content="{{ site.name }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ site.url }}/blog/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}/blog/">
+  <meta property="og:title" content="Blog — {{ site.name }}">
+  <meta property="og:description" content="Articles on computer vision, person re-identification, biometric recognition, and applied machine learning by {{ site.name }}.">
+  <meta property="og:image" content="{{ site.url }}/images/portrait.jpg">
+  <meta property="og:image:alt" content="{{ site.name }} — Research Blog">
+  <meta property="og:site_name" content="{{ site.name }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="Blog — {{ site.name }}">
+  <meta name="twitter:description" content="Articles on computer vision, person re-identification, biometric recognition, and applied machine learning.">
+  <meta name="twitter:image" content="{{ site.url }}/images/portrait.jpg">
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} Blog" href="{{ site.url }}/feed.xml">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
   <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">

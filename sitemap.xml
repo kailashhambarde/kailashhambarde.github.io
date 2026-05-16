@@ -1,0 +1,54 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Blog index -->
+  <url>
+    <loc>{{ site.url }}/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- CV -->
+  <url>
+    <loc>{{ site.url }}/cv.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog posts -->
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endfor %}
+
+  <!-- HTML pages (excluding special files) -->
+  {% for page in site.pages %}
+    {% if page.path contains '.html' or page.path contains '.md' %}
+      {% unless page.path contains 'cv.html' or page.path contains 'blog.html' or page.path contains 'index.html' or page.path contains 'vendor' or page.path contains '_' %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+</urlset>

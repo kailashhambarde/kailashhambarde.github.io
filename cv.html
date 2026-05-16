@@ -7,7 +7,35 @@ layout: null
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CV — {{ site.name }}</title>
+
+  <!-- Primary SEO -->
+  <title>CV — {{ site.name }} | Researcher, Instituto de Telecomunicações & UBI</title>
+  <meta name="description" content="Curriculum Vitae of {{ site.name }}: researcher at Instituto de Telecomunicações and lecturer at University of Beira Interior, Portugal. Expert in computer vision, person re-identification, and deep learning.">
+  <meta name="keywords" content="Kailash Hambarde CV, curriculum vitae, computer vision researcher, person re-identification, biometric recognition, Instituto de Telecomunicações, University of Beira Interior">
+  <meta name="author" content="{{ site.name }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ site.url }}/cv.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="{{ site.url }}/cv.html">
+  <meta property="og:title" content="CV — {{ site.name }}">
+  <meta property="og:description" content="Curriculum Vitae of {{ site.name }}: researcher specialising in computer vision, person re-identification, biometrics, and deep learning.">
+  <meta property="og:image" content="{{ site.url }}/images/portrait.jpg">
+  <meta property="og:image:alt" content="Portrait of {{ site.name }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="CV — {{ site.name }}">
+  <meta name="twitter:description" content="Curriculum Vitae of {{ site.name }}: researcher specialising in computer vision, person re-identification, biometrics, and deep learning.">
+  <meta name="twitter:image" content="{{ site.url }}/images/portrait.jpg">
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} Blog" href="{{ site.url }}/feed.xml">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];

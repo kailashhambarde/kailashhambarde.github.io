@@ -5,7 +5,18 @@ position: Researcher
 affiliation: Instituto de Telecomunicações & University of Beira Interior
 email: kailash.hambarde@ubi.pt
 description: >-
-  My research focuses on computer vision, person re-identification, and deep learning.
+  Kailash A. Hambarde is a researcher at Instituto de Telecomunicações and lecturer at the University
+  of Beira Interior, Portugal. His work spans computer vision, person re-identification,
+  biometric recognition, deep learning, and UAV-based perception in unconstrained visual conditions.
+author:
+  name: Kailash A. Hambarde
+  email: kailash.hambarde@ubi.pt
+  twitter: kailas_srt
+keywords: >-
+  Kailash Hambarde, person re-identification, computer vision, deep learning,
+  biometric recognition, UAV person recognition, aerial-ground ReID, machine learning,
+  Instituto de Telecomunicações, University of Beira Interior, pattern recognition,
+  image analysis, video-based ReID, unconstrained visual conditions
 
 baseurl: ""
 url: "https://kailashhambarde.github.io"
@@ -24,6 +35,7 @@ cienciavitae: ""
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 exclude:
   - .bundle

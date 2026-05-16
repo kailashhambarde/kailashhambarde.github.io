@@ -7,8 +7,84 @@ layout: null
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.description | strip_html | truncate: 160 }}">
-  <title>{{ site.name }} — Researcher</title>
+
+  <!-- Primary SEO -->
+  <title>{{ site.name }} — Computer Vision Researcher | Instituto de Telecomunicações</title>
+  <meta name="description" content="{{ site.description | strip_html | strip_newlines | normalize_whitespace | truncate: 160 }}">
+  <meta name="keywords" content="{{ site.keywords | strip_newlines | normalize_whitespace }}">
+  <meta name="author" content="{{ site.name }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ site.url }}/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="{{ site.url }}/">
+  <meta property="og:title" content="{{ site.name }} — Computer Vision Researcher">
+  <meta property="og:description" content="{{ site.description | strip_html | strip_newlines | normalize_whitespace | truncate: 200 }}">
+  <meta property="og:image" content="{{ site.url }}/images/portrait.jpg">
+  <meta property="og:image:alt" content="Portrait of {{ site.name }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="profile:first_name" content="Kailash">
+  <meta property="profile:last_name" content="Hambarde">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="{{ site.name }} — Computer Vision Researcher">
+  <meta name="twitter:description" content="{{ site.description | strip_html | strip_newlines | normalize_whitespace | truncate: 200 }}">
+  <meta name="twitter:image" content="{{ site.url }}/images/portrait.jpg">
+  <meta name="twitter:image:alt" content="Portrait of {{ site.name }}">
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} Blog" href="{{ site.url }}/feed.xml">
+
+  <!-- JSON-LD: Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}/images/portrait.jpg",
+    "email": "{{ site.email }}",
+    "jobTitle": "Researcher & Lecturer",
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "Instituto de Telecomunicações",
+        "url": "https://www.it.pt"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "University of Beira Interior",
+        "url": "https://www.ubi.pt"
+      }
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University of Beira Interior"
+    },
+    "sameAs": [
+      "https://scholar.google.com/citations?user={{ site.google_scholar }}",
+      "https://github.com/{{ site.github_username }}",
+      "https://twitter.com/{{ site.twitter_username }}",
+      "https://www.linkedin.com/in/{{ site.linkedin_username }}/",
+      "https://www.it.pt/Members/Index/40083"
+    ],
+    "knowsAbout": [
+      "Computer Vision",
+      "Person Re-Identification",
+      "Deep Learning",
+      "Biometric Recognition",
+      "Machine Learning",
+      "UAV-based Perception",
+      "Pattern Recognition"
+    ],
+    "description": "{{ site.description | strip_html | strip_newlines | normalize_whitespace }}"
+  }
+  </script>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -305,6 +381,35 @@ layout: null
     <script type="text/javascript" id="clustrmaps"
       src="https://clustrmaps.com/map_v2.js?d=wvJtg5CzMjnCQfHM8rLUTFuZPZKFj3UvvNiNrr2iDZI&cl=ffffff&w=200"></script>
   </div>
+
+  <!-- JSON-LD: ScholarlyArticle list for publications -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Publications by {{ site.name }}",
+    "description": "Academic publications by {{ site.name }} on computer vision, person re-identification, and machine learning.",
+    "itemListElement": [{% for pub in site.data.publications %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "item": {
+          "@type": "ScholarlyArticle",
+          "name": {{ pub.title | jsonify }},
+          "description": {{ pub.description | default: pub.title | jsonify }},
+          "author": {
+            "@type": "Person",
+            "name": {{ site.name | jsonify }}
+          },
+          "isPartOf": {
+            "@type": "Periodical",
+            "name": {{ pub.venue | jsonify }}
+          }
+        }
+      }{% unless forloop.last %},{% endunless %}{% endfor %}
+    ]
+  }
+  </script>
 
   <!-- Scripts -->
   <script>

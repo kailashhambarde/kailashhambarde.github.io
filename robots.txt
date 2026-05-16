@@ -1,0 +1,15 @@
+---
+layout: null
+---
+User-agent: *
+Allow: /
+
+# Block build artifacts and vendor code
+Disallow: /vendor/
+Disallow: /_site/
+Disallow: /.git/
+Disallow: /.idea/
+Disallow: /.vscode/
+
+# Sitemap location
+Sitemap: {{ site.url }}/sitemap.xml
