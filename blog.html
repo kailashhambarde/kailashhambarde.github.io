@@ -72,6 +72,8 @@ title: Blog
         <p>{{ site.data.blog.description }}</p>
       </header>
 
+      <p class="blog-post-count">{{ site.posts | size }} post{% if site.posts.size != 1 %}s{% endif %}</p>
+
       <section class="blog-index" aria-label="Blog posts">
         {% for post in site.posts %}
         <article class="blog-index-item">
@@ -81,7 +83,7 @@ title: Blog
           </div>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           {% if post.excerpt %}
-          <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+          <p>{{ post.excerpt | strip_html | truncate: 240 }}</p>
           {% endif %}
           {% if post.tags %}
           <div class="tag-list">
@@ -90,6 +92,7 @@ title: Blog
             {% endfor %}
           </div>
           {% endif %}
+          <a class="blog-read-more" href="{{ post.url | relative_url }}">Read post <i class="fas fa-arrow-right"></i></a>
         </article>
         {% endfor %}
       </section>

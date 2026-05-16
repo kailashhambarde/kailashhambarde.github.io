@@ -336,23 +336,22 @@ a {
 // ============================================================
 //  BLOG
 // ============================================================
-.blog-preview-list,
-.blog-index {
+
+// --- Homepage preview list (compact, 3 items) ---
+.blog-preview-list {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-.blog-preview,
-.blog-index-item {
-  padding: 0.9rem 0;
+.blog-preview {
+  padding: 1rem 0;
   border-bottom: 1px solid $border;
 
   &:last-child { border-bottom: none; }
 
-  h2,
   h3 {
-    font-size: 0.95rem;
+    font-size: 0.97rem;
     font-weight: 700;
     line-height: 1.4;
     margin: 0 0 0.25rem;
@@ -365,11 +364,108 @@ a {
   }
 
   p {
-    font-size: 0.85rem;
+    font-size: 0.855rem;
     color: $mid;
-    line-height: 1.6;
-    margin: 0.2rem 0 0.45rem;
+    line-height: 1.65;
+    margin: 0.2rem 0 0.5rem;
   }
+}
+
+// --- Blog index page (full list, richer cards) ---
+.blog-index {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.blog-index-item {
+  padding: 1.4rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid $border;
+  margin-bottom: 0.75rem;
+  background: $bg;
+  transition: box-shadow 0.18s, border-color 0.18s, transform 0.18s;
+
+  &:last-child { margin-bottom: 0; }
+
+  &:hover {
+    border-color: darken($border, 8%);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    transform: translateY(-1px);
+  }
+
+  h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.4rem;
+    color: $dark;
+
+    a {
+      color: $dark;
+      &:hover { color: $primary; text-decoration: none; }
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $mid;
+    line-height: 1.7;
+    margin: 0.25rem 0 0.6rem;
+  }
+}
+
+// "Read more →" link
+.blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $primary;
+  margin-top: 0.2rem;
+
+  &:hover {
+    color: $primary-dark;
+    text-decoration: none;
+    gap: 0.5rem;
+  }
+}
+
+// "View all posts" button (below homepage preview)
+.blog-view-all {
+  margin-top: 1rem;
+  text-align: right;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: $mid;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid $border;
+    border-radius: 6px;
+    background: $bg;
+    transition: all 0.15s;
+
+    &:hover {
+      border-color: $primary;
+      color: $primary;
+      background: $primary-light;
+      text-decoration: none;
+    }
+  }
+}
+
+// Post count badge on blog index
+.blog-post-count {
+  font-size: 0.78rem;
+  color: $light;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
 }
 
 .blog-meta {
@@ -380,17 +476,12 @@ a {
   color: $light;
   font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
 
   span::before {
-    content: '';
-    display: inline-block;
-    width: 4px;
-    height: 4px;
-    margin-right: 0.45rem;
-    border-radius: 50%;
-    background: $border;
-    vertical-align: middle;
+    content: '·';
+    margin-right: 0.3rem;
+    color: $border;
   }
 }
 
@@ -398,18 +489,20 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
+  margin-top: 0.5rem;
 
   span {
     display: inline-flex;
     align-items: center;
     min-height: 22px;
-    padding: 0.1rem 0.5rem;
+    padding: 0.1rem 0.55rem;
     border-radius: 20px;
-    background: $bg-alt;
-    border: 1px solid $border;
-    color: $mid;
-    font-size: 0.7rem;
+    background: $primary-light;
+    border: 1px solid rgba(37,99,235,0.15);
+    color: $primary-dark;
+    font-size: 0.69rem;
     font-weight: 600;
+    letter-spacing: 0.01em;
   }
 }
 

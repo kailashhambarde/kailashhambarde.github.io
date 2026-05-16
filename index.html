@@ -232,6 +232,12 @@ layout: null
         </article>
         {% endfor %}
       </div>
+
+      {% if site.posts.size > 3 %}
+      <div class="blog-view-all">
+        <a href="{{ '/blog/' | relative_url }}">All posts <i class="fas fa-arrow-right"></i></a>
+      </div>
+      {% endif %}
     </div>
   </section>
 
