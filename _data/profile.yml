@@ -1,0 +1,30 @@
+# ============================================================
+# PROFILE
+# Everything on the homepage that describes you.
+# Edit these values — the page renders from this file.
+# ============================================================
+
+tagline: >-
+  Computer Vision Researcher & Lecturer · Instituto de Telecomunicações (IT)
+  & University of Beira Interior (UBI), Portugal
+
+bio: >-
+  I am a Researcher at the [Instituto de Telecomunicações](https://www.it.pt/Members/Index/40083)
+  and a Lecturer (Docente) at the [University of Beira Interior](https://www.ubi.pt/), Portugal,
+  working in the Pattern and Image Analysis group (Thematic Line on Information and Data Sciences).
+  My research focuses on computer vision, biometric recognition, person re-identification, and
+  machine learning systems that stay reliable in unconstrained visual conditions — including
+  aerial-ground and extreme far-distance scenarios. Before moving to Portugal I worked in industry
+  as a Senior Data Scientist, and I hold a Ph.D. in Computer Science from
+  [SRTM University](https://srtmun.ac.in/en/), India.
+
+research_interests:
+  - Computer Vision
+  - Person Re-Identification
+  - Biometrics
+  - Deep Learning
+  - UAV-based Perception
+  - Pattern Recognition
+  - Visual Surveillance
+  - Machine Learning & Data Science
+  - Information Retrieval

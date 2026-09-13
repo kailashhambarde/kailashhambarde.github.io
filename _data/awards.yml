@@ -1,0 +1,19 @@
+# ============================================================
+# AWARDS & HONORS
+# Each item: date, title, optional url and description.
+# The homepage renders this list in the "Awards & Honors" section.
+# ============================================================
+
+- date: "May 2026"
+  title: "Outstanding Reviewer — IEEE Transactions on Biometrics, Behavior, and Identity Science (IEEE-TBIOM)"
+  url: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8423754"
+  description: "Recognised for exceptional contributions to the peer review process."
+
+- date: "Mar 2026"
+  title: "2nd Place — Cross-View Re-Identification Track, CodaBench Competition"
+  url: "https://www.codabench.org/competitions/12315/#/results-tab"
+
+- date: "Mar 2026"
+  title: "NTIRE 2026 Challenges @ CVPR 2026 — Top-Ranked Results"
+  url: "https://cvlai.net/ntire/2026/"
+  description: "Ranked 7th of 51 teams in Image Shadow Removal and 6th of 24 teams in Image Denoising (noise level 50)."

@@ -3,10 +3,10 @@
 	"file": "main.css",
 	"sources": [
 		"main.scss",
-		"vendor/bundle/ruby/4.0.0/gems/minima-2.5.1/_sass/minima.scss",
-		"vendor/bundle/ruby/4.0.0/gems/minima-2.5.1/_sass/minima/_base.scss",
-		"vendor/bundle/ruby/4.0.0/gems/minima-2.5.1/_sass/minima/_layout.scss",
-		"vendor/bundle/ruby/4.0.0/gems/minima-2.5.1/_sass/minima/_syntax-highlighting.scss"
+		"../../../../../private/var/folders/4x/t6q5cys1221b8rg04k0l804m0000gn/T/cursor-sandbox-cache/9c4dc849c21c01898d3882835d22f61d/bundle/ruby/4.0.0/gems/minima-2.5.1/_sass/minima.scss",
+		"../../../../../private/var/folders/4x/t6q5cys1221b8rg04k0l804m0000gn/T/cursor-sandbox-cache/9c4dc849c21c01898d3882835d22f61d/bundle/ruby/4.0.0/gems/minima-2.5.1/_sass/minima/_base.scss",
+		"../../../../../private/var/folders/4x/t6q5cys1221b8rg04k0l804m0000gn/T/cursor-sandbox-cache/9c4dc849c21c01898d3882835d22f61d/bundle/ruby/4.0.0/gems/minima-2.5.1/_sass/minima/_layout.scss",
+		"../../../../../private/var/folders/4x/t6q5cys1221b8rg04k0l804m0000gn/T/cursor-sandbox-cache/9c4dc849c21c01898d3882835d22f61d/bundle/ruby/4.0.0/gems/minima-2.5.1/_sass/minima/_syntax-highlighting.scss"
 	],
 	"sourcesContent": [
 		"@import \"minima\";\n",

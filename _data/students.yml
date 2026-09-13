@@ -1,0 +1,22 @@
+# ============================================================
+# STUDENTS & ADVISING
+# Fields: name, level (msc|bsc), role, period, topic, status,
+#         link (optional), co_advisor (optional).
+# ============================================================
+
+- name: "Sharayu Nilesh Deshmukh"
+  level: msc
+  degree: "M.Sc. thesis"
+  role: "Co-supervisor"
+  period: "Concluded 06-2026"
+  topic: "Are DeepFakes Realistic Enough? Exploring Semantic Mismatch as a Novel Challenge"
+  status: "concluded"
+  link: "https://arxiv.org/abs/2604.28022"
+
+- name: "Gonçalo Alexandre Caixeiro"
+  level: bsc
+  degree: "B.Sc. thesis"
+  role: "Co-supervisor"
+  period: "Concluded 06-2025"
+  topic: "Bias Analysis in LLMs"
+  status: "concluded"

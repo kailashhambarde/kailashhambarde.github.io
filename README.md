@@ -2,6 +2,30 @@
 
 Personal academic website powered by Jekyll and GitHub Pages.
 
+## Homepage — everything is data
+
+The homepage follows a clean, minimal academic template (Lato typeface, slim
+820px layout, soft indigo-blue accents). You never touch HTML — you edit the
+files in `_data/`, and the page updates automatically.
+
+| Data file | Homepage section | Key fields |
+|---|---|---|
+| `_data/profile.yml` | About (tagline, bio, interests) | `tagline`, `bio`, `research_interests` |
+| `_data/news.yml` | News | `date`, `description` (Markdown) |
+| `_data/publications.yml` | Publications | `title`, `venue`, `authors`, `image`, `project_page`, `arxiv`, `github`, `awards` |
+| `_data/authors.yml` | Author names in publications | `first_name`, `middle_name`, `last_name`, `website`, `is_me` |
+| `_data/research.yml` | Research Overview cards | `title`, `icon`, `summary`, `topics`, `links` |
+| `_data/education.yml` | Education | `name`, `description`, `dates` |
+| `_data/employment.yml` | Experience | `company`, `description`, `dates`, `location` |
+| `_data/awards.yml` | Awards & Honors | `date`, `title`, `url`, `description` |
+| `_data/funding.yml` | Research Funding & Projects | `project`, `role`, `funder`, `dates`, `description` |
+| `_data/services.yml` | Academic Service (peer review, committees, invited talks) | `peer_review`, `committees`, `invited_talks` |
+| `_data/teaching.yml` | Teaching *(shows only when filled)* | uncomment the example |
+| `_data/students.yml` | Students & Advising *(shows only when filled)* | uncomment the example |
+
+The homepage style lives in `css/academic.css`. The Blog and CV pages keep
+their own (Bulma-based) styling.
+
 ## Run Locally
 
 ```bash

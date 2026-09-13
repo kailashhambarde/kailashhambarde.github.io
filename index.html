@@ -9,38 +9,276 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Primary SEO -->
-  <title>{{ site.name }} — Computer Vision Researcher | Instituto de Telecomunicações</title>
+  <title>{{ site.name }} — Computer Vision Researcher & Lecturer | Instituto de Telecomunicações & UBI</title>
   <meta name="description" content="{{ site.description | strip_html | strip_newlines | normalize_whitespace | truncate: 160 }}">
   <meta name="keywords" content="{{ site.keywords | strip_newlines | normalize_whitespace }}">
   <meta name="author" content="{{ site.name }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ site.url }}/">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="profile">
   <meta property="og:url" content="{{ site.url }}/">
-  <meta property="og:title" content="{{ site.name }} — Computer Vision Researcher">
+  <meta property="og:title" content="{{ site.name }} — Computer Vision Researcher & Lecturer">
   <meta property="og:description" content="{{ site.description | strip_html | strip_newlines | normalize_whitespace | truncate: 200 }}">
   <meta property="og:image" content="{{ site.url }}/images/portrait.jpg">
-  <meta property="og:image:alt" content="Portrait of {{ site.name }}">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:locale" content="en_US">
-  <meta property="profile:first_name" content="Kailash">
-  <meta property="profile:last_name" content="Hambarde">
 
   <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@{{ site.twitter_username }}">
   <meta name="twitter:creator" content="@{{ site.twitter_username }}">
-  <meta name="twitter:title" content="{{ site.name }} — Computer Vision Researcher">
+  <meta name="twitter:title" content="{{ site.name }} — Computer Vision Researcher & Lecturer">
   <meta name="twitter:description" content="{{ site.description | strip_html | strip_newlines | normalize_whitespace | truncate: 200 }}">
   <meta name="twitter:image" content="{{ site.url }}/images/portrait.jpg">
-  <meta name="twitter:image:alt" content="Portrait of {{ site.name }}">
 
-  <!-- RSS Feed -->
+  <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} Blog" href="{{ site.url }}/feed.xml">
 
-  <!-- JSON-LD: Person Schema -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link href="{{ '/css/academic.css' | relative_url }}" rel="stylesheet">
+
+  {% if site.google_analytics and site.google_analytics != "" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#about">{{ site.name }}</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#committees">Committees</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#supervision">Supervision</a>
+        <a href="#talks">Talks</a>
+        <a href="{{ '/cv.html' | relative_url }}">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about" class="about">
+    <div class="about-content">
+      <div class="profile-pic">
+        <img src="{{ '/images/portrait.jpg' | relative_url }}" alt="Portrait of {{ site.name }}">
+      </div>
+      <div class="about-text">
+        <h1 class="name">{{ site.name }}</h1>
+        <p class="affiliation">
+          <span>Researcher, Instituto de Telecomunicações</span>
+          <span>Lecturer, Department of Informatics, University of Beira Interior</span>
+          <span>Covilhã, Portugal</span>
+        </p>
+        <ul class="link-list">
+          <li><a href="mailto:{{ site.email }}">Email</a></li>
+          <li><span class="sep">·</span><a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" target="_blank" rel="noopener">Scholar</a></li>
+          <li><span class="sep">·</span><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a></li>
+          <li><span class="sep">·</span><a href="{{ '/cv.html' | relative_url }}">CV</a></li>
+        </ul>
+        <div class="bio">
+          {{ site.data.profile.bio | markdownify }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="section">
+    <h2 class="section-title">News</h2>
+    {% for item in site.data.news limit: 6 %}
+    <div class="news-item">
+      <span class="news-date">{{ item.date }}</span>
+      <span class="news-text">{{ item.description | replace: "📢 ", "" | replace: "🏆 ", "" | markdownify }}</span>
+    </div>
+    {% endfor %}
+    {% assign news_count = site.data.news | size %}
+    {% if news_count > 6 %}
+    <details class="older-news">
+      <summary>Older news</summary>
+      {% for item in site.data.news offset: 6 %}
+      <div class="news-item">
+        <span class="news-date">{{ item.date }}</span>
+        <span class="news-text">{{ item.description | replace: "📢 ", "" | replace: "🏆 ", "" | markdownify }}</span>
+      </div>
+      {% endfor %}
+    </details>
+    {% endif %}
+  </section>
+
+  {% if site.data.research %}
+  <section id="research" class="section">
+    <h2 class="section-title">Research</h2>
+    {% for cluster in site.data.research %}
+    <div class="research-block">
+      <h3>{{ cluster.title }}</h3>
+      {% if cluster.summary %}<p>{{ cluster.summary }}</p>{% endif %}
+      {% if cluster.topics %}
+      <ul class="plain-list">
+        {% for topic in cluster.topics %}
+        <li>{{ topic }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if cluster.links %}
+      <p class="text-links">
+        {% for link in cluster.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.text }}</a>{% unless forloop.last %} · {% endunless %}
+        {% endfor %}
+      </p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <section id="publications" class="section">
+    <h2 class="section-title">Selected publications</h2>
+    {% for pub in site.data.publications %}
+      {% if pub.selected %}
+        {% include publication.html highlight_selected=false %}
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <section id="all-publications" class="section">
+    <h2 class="section-title">All publications</h2>
+    <p class="section-note">A complete and up-to-date list is also on <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    {% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+    {% for year_group in pubs_by_year %}
+    <h3 class="year-title">{{ year_group.name }}</h3>
+    {% for pub in year_group.items %}
+      {% include publication.html highlight_selected=true %}
+    {% endfor %}
+    {% endfor %}
+  </section>
+
+  {% if site.data.funding %}
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    {% for item in site.data.funding %}
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">{{ item.project }}</span>
+        <span class="entry-dates">{{ item.dates }}</span>
+      </div>
+      <div class="entry-sub">{% if item.role %}{{ item.role }}{% endif %}{% if item.role and item.funder %} · {% endif %}{% if item.funder %}{{ item.funder }}{% endif %}</div>
+      {% if item.description %}<div class="entry-desc">{{ item.description }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if site.data.services.committees %}
+  <section id="committees" class="section">
+    <h2 class="section-title">Committees</h2>
+    {% for item in site.data.services.committees %}
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">{% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.event }}</a>{% else %}{{ item.event }}{% endif %}</span>
+        <span class="entry-dates">{{ item.dates }}</span>
+      </div>
+      <div class="entry-sub">{{ item.role }}</div>
+      {% if item.description %}<div class="entry-desc">{{ item.description }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if site.data.teaching %}
+  <section id="teaching" class="section">
+    <h2 class="section-title">Lecture courses</h2>
+    {% for t in site.data.teaching %}
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">{{ t.course }}</span>
+        {% if t.dates %}<span class="entry-dates">{{ t.dates }}</span>{% endif %}
+      </div>
+      <div class="entry-sub">{% if t.role %}{{ t.role }} · {% endif %}{{ t.institution }}{% if t.programme %} · {{ t.programme }}{% endif %}</div>
+      {% if t.description %}<div class="entry-desc">{{ t.description }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <section id="supervision" class="section">
+    <h2 class="section-title">Supervision</h2>
+    {% assign students = site.data.students %}
+    {% assign msc_students = students | where: "level", "msc" %}
+    {% assign bsc_students = students | where: "level", "bsc" %}
+
+    {% if msc_students.size > 0 %}
+    <h3 class="year-title">M.Sc. theses</h3>
+    <p class="entry-sub">As Co-supervisor</p>
+    {% for s in msc_students %}
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">{% if s.link %}<a href="{{ s.link }}" target="_blank" rel="noopener">{{ s.topic }}</a>{% else %}{{ s.topic }}{% endif %}</span>
+        <span class="entry-dates">{{ s.period }}</span>
+      </div>
+      <div class="entry-sub">M.Sc. student, {{ s.name }}</div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if bsc_students.size > 0 %}
+    <h3 class="year-title">B.Sc. theses</h3>
+    <p class="entry-sub">As Co-supervisor</p>
+    {% for s in bsc_students %}
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">{% if s.link %}<a href="{{ s.link }}" target="_blank" rel="noopener">{{ s.topic }}</a>{% else %}{{ s.topic }}{% endif %}</span>
+        <span class="entry-dates">{{ s.period }}</span>
+      </div>
+      <div class="entry-sub">B.Sc. student, {{ s.name }}</div>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </section>
+
+  {% if site.data.services.invited_talks %}
+  <section id="talks" class="section">
+    <h2 class="section-title">Talks</h2>
+    {% for talk in site.data.services.invited_talks %}
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">{% if talk.url %}<a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>{% else %}{{ talk.title }}{% endif %}</span>
+        <span class="entry-dates">{{ talk.dates }}</span>
+      </div>
+      <div class="entry-sub">{{ talk.event }}</div>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <footer class="footer">
+    <p>© {{ site.time | date: "%Y" }} {{ site.name }} · Last updated {{ site.time | date: "%B %Y" }}</p>
+    <p>
+      <a href="mailto:{{ site.email }}">Email</a> ·
+      <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a> ·
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="{{ '/cv.html' | relative_url }}">CV</a>
+    </p>
+  </footer>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,422 +289,17 @@ layout: null
     "email": "{{ site.email }}",
     "jobTitle": "Researcher & Lecturer",
     "affiliation": [
-      {
-        "@type": "Organization",
-        "name": "Instituto de Telecomunicações",
-        "url": "https://www.it.pt"
-      },
-      {
-        "@type": "EducationalOrganization",
-        "name": "University of Beira Interior",
-        "url": "https://www.ubi.pt"
-      }
+      { "@type": "Organization", "name": "Instituto de Telecomunicações", "url": "https://www.it.pt" },
+      { "@type": "EducationalOrganization", "name": "University of Beira Interior", "url": "https://www.ubi.pt" }
     ],
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "University of Beira Interior"
-    },
     "sameAs": [
       "https://scholar.google.com/citations?user={{ site.google_scholar }}",
       "https://github.com/{{ site.github_username }}",
       "https://twitter.com/{{ site.twitter_username }}",
-      "https://www.linkedin.com/in/{{ site.linkedin_username }}/",
-      "https://www.it.pt/Members/Index/40083"
+      "https://www.linkedin.com/in/{{ site.linkedin_username }}/"
     ],
-    "knowsAbout": [
-      "Computer Vision",
-      "Person Re-Identification",
-      "Deep Learning",
-      "Biometric Recognition",
-      "Machine Learning",
-      "UAV-based Perception",
-      "Pattern Recognition"
-    ],
-    "description": "{{ site.description | strip_html | strip_newlines | normalize_whitespace }}"
+    "knowsAbout": {{ site.data.profile.research_interests | jsonify }}
   }
-  </script>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
-
-  <!-- Bulma CSS -->
-  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
-
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
-</head>
-
-<body>
-
-  <!-- ===== NAVBAR ===== -->
-  <nav class="topnav" id="topnav">
-    <div class="container is-max-desktop topnav-inner">
-      <a class="topnav-brand" href="#about">KH</a>
-      <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links" id="navLinks">
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#news">News</a>
-        <a class="nav-link" href="#blog">Blog</a>
-        <a class="nav-link" href="#publications">Publications</a>
-        <a class="nav-link" href="#contact">Contact</a>
-        <a class="nav-link nav-cv" href="cv.html"><i class="fas fa-file-alt"></i> CV</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ===== ABOUT / HERO ===== -->
-  <section id="about" class="about-section">
-    <div class="container is-max-desktop">
-      <div class="columns is-vcentered about-columns">
-
-        <div class="column is-narrow portrait-col">
-          <div class="portrait">
-            <img src="{{ '/images/portrait.jpg?v=20260514' | relative_url }}" alt="{{ site.name }}" />
-          </div>
-        </div>
-
-        <div class="column about-text-col">
-          <h1 class="about-name">{{ site.name }}</h1>
-
-          <div class="about-positions">
-            <div class="position-line">
-              <span>Researcher · <a href="https://www.it.pt/Members/Index/40083" target="_blank">Instituto de Telecomunicações</a>
-              &amp; Docente · <a href="https://www.ubi.pt/" target="_blank">UBI</a>, Portugal</span>
-            </div>
-            <div class="position-line muted">
-              <span>Pattern and Image Analysis · Information and Data Sciences</span>
-            </div>
-          </div>
-
-          <div class="about-bio">
-            <p>
-              I work on computer vision, biometric recognition, person re-identification, and machine learning systems
-              that stay reliable in unconstrained visual conditions, including aerial-ground and extreme-distance scenarios.
-            </p>
-          </div>
-
-          <div class="about-buttons">
-            <a class="about-btn" href="cv.html">
-              <i class="fas fa-file-alt"></i> CV
-            </a>
-            <a class="about-btn" href="https://scholar.google.com/citations?user={{ site.google_scholar }}" target="_blank">
-              <i class="ai ai-google-scholar"></i> Google Scholar
-            </a>
-            <a class="about-btn" href="https://github.com/{{ site.github_username }}" target="_blank">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a class="about-btn" href="https://www.it.pt/Members/Index/40083" target="_blank">
-              <i class="fas fa-globe"></i> IT Profile
-            </a>
-            <a class="about-btn" href="mailto:{{ site.email }}">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== RESEARCH INTERESTS ===== -->
-  <!-- ===== NEWS ===== -->
-  <section id="news" class="content-section alt-bg">
-    <div class="container is-max-desktop">
-      <h2 class="section-heading">News</h2>
-      <div class="news-list">
-        {% for item in site.data.news limit:6 %}
-        <div class="news-row">
-          <span class="news-date">{{ item.date }}</span>
-          <span class="news-body">{{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}</span>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BLOG ===== -->
-  <section id="blog" class="content-section">
-    <div class="container is-max-desktop">
-      <div class="section-title-row">
-        <h2 class="section-heading">{{ site.data.blog.title }}</h2>
-        <a class="section-action" href="{{ '/blog/' | relative_url }}">All posts <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="blog-preview-list">
-        {% for post in site.posts limit:3 %}
-        <article class="blog-preview">
-          <div class="blog-meta">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-            {% if post.reading_time %}<span>{{ post.reading_time }}</span>{% endif %}
-          </div>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          {% if post.excerpt %}
-          <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
-          {% endif %}
-          {% if post.tags %}
-          <div class="tag-list">
-            {% for tag in post.tags limit:4 %}
-            <span>{{ tag }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </article>
-        {% endfor %}
-      </div>
-
-      {% if site.posts.size > 3 %}
-      <div class="blog-view-all">
-        <a href="{{ '/blog/' | relative_url }}">All posts <i class="fas fa-arrow-right"></i></a>
-      </div>
-      {% endif %}
-    </div>
-  </section>
-
-  <!-- ===== PUBLICATIONS ===== -->
-  <section id="publications" class="content-section alt-bg">
-    <div class="container is-max-desktop">
-      <h2 class="section-heading">Publications</h2>
-
-      {% for pub in site.data.publications %}
-      <div class="pub-block">
-
-        <div class="pub-thumb-wrap">
-          <div class="pub-thumb">
-            {% if pub.image %}
-            <img src="./images/{{ pub.image }}" alt="{{ pub.title }}"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-            <div class="pub-thumb-placeholder" style="display:none;">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            {% else %}
-            <div class="pub-thumb-placeholder">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            {% endif %}
-          </div>
-        </div>
-
-        <div class="pub-body">
-          <h3 class="pub-title">
-            {% if pub.project_page %}
-            <a href="{{ pub.project_page }}" target="_blank">{{ pub.title }}</a>
-            {% else %}
-            {{ pub.title }}
-            {% endif %}
-          </h3>
-
-          <div class="pub-authors">
-            {% for author_id in pub.authors %}
-            {% assign author = site.data.authors[author_id] %}
-            <span class="pub-author {% if author.is_me %}pub-author-me{% endif %}">
-              {% if author.is_me %}
-              {{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}{% unless forloop.last %},{% endunless %}
-              {% else %}
-              {% if author.website %}<a href="{{ author.website }}" target="_blank">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}</a>{% else %}{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}{% endif %}{% unless forloop.last %},{% endunless %}
-              {% endif %}
-            </span>
-            {% endfor %}
-          </div>
-
-          <div class="pub-venue">
-            <span class="pub-venue-name">{{ pub.venue }}</span>
-            {% for award in pub.awards %}
-            <span class="pub-badge">{{ award }}</span>
-            {% endfor %}
-          </div>
-
-          <div class="pub-links">
-            {% if pub.project_page %}
-            <a class="pub-link-btn" href="{{ pub.project_page }}" target="_blank">
-              <i class="fas fa-globe"></i> Project
-            </a>
-            {% endif %}
-            {% if pub.arxiv and pub.arxiv != "" and pub.arxiv != "0000.00000" %}
-            {% unless pub.arxiv contains "http" %}
-            <a class="pub-link-btn" href="https://arxiv.org/abs/{{ pub.arxiv }}" target="_blank">
-              <i class="ai ai-arxiv"></i> arXiv
-            </a>
-            {% endunless %}
-            {% endif %}
-            {% if pub.github and pub.github != "" %}
-            <a class="pub-link-btn" href="https://github.com/{{ pub.github }}" target="_blank">
-              <i class="fab fa-github"></i> Code
-            </a>
-            {% endif %}
-          </div>
-        </div>
-
-      </div>
-      {% endfor %}
-
-    </div>
-  </section>
-
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="content-section alt-bg">
-    <div class="container is-max-desktop">
-      <h2 class="section-heading">Contact</h2>
-      <div class="columns">
-        <div class="column is-half">
-          <div class="contact-list">
-            <div class="contact-row">
-              <i class="fas fa-envelope contact-icon"></i>
-              <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-            </div>
-            <div class="contact-row">
-              <i class="fas fa-building contact-icon"></i>
-              <span>Instituto de Telecomunicações<br>
-              Departamento de Informática, UBI<br>
-              Covilhã 6201-001, Portugal</span>
-            </div>
-            <div class="contact-row">
-              <i class="fas fa-link contact-icon"></i>
-              <a href="https://www.it.pt/Members/Index/40083" target="_blank">IT Profile — it.pt</a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-half">
-          <div class="contact-social">
-            <a class="social-btn" href="mailto:{{ site.email }}">
-              <i class="fas fa-envelope"></i><span>Email</span>
-            </a>
-            <a class="social-btn" href="https://scholar.google.com/citations?user={{ site.google_scholar }}" target="_blank">
-              <i class="ai ai-google-scholar"></i><span>Scholar</span>
-            </a>
-            <a class="social-btn" href="https://github.com/{{ site.github_username }}" target="_blank">
-              <i class="fab fa-github"></i><span>GitHub</span>
-            </a>
-            <a class="social-btn" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
-              <i class="fab fa-twitter"></i><span>Twitter</span>
-            </a>
-            <a class="social-btn" href="https://www.it.pt/Members/Index/40083" target="_blank">
-              <i class="fas fa-globe"></i><span>IT Profile</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="container is-max-desktop">
-      <div class="footer-inner">
-        <p class="footer-copy">
-          &copy; <span id="current-year"></span> {{ site.name }}
-        </p>
-        <p class="footer-note">
-          Researcher · Instituto de Telecomunicações · University of Beira Interior
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ClusterMaps -->
-  <div class="clustrmaps-wrap">
-    <script type="text/javascript" id="clustrmaps"
-      src="https://clustrmaps.com/map_v2.js?d=wvJtg5CzMjnCQfHM8rLUTFuZPZKFj3UvvNiNrr2iDZI&cl=ffffff&w=200"></script>
-  </div>
-
-  <!-- JSON-LD: ScholarlyArticle list for publications -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Publications by {{ site.name }}",
-    "description": "Academic publications by {{ site.name }} on computer vision, person re-identification, and machine learning.",
-    "itemListElement": [{% for pub in site.data.publications %}
-      {
-        "@type": "ListItem",
-        "position": {{ forloop.index }},
-        "item": {
-          "@type": "ScholarlyArticle",
-          "name": {{ pub.title | jsonify }},
-          "description": {{ pub.description | default: pub.title | jsonify }},
-          "author": {
-            "@type": "Person",
-            "name": {{ site.name | jsonify }}
-          },
-          "isPartOf": {
-            "@type": "Periodical",
-            "name": {{ pub.venue | jsonify }}
-          }
-        }
-      }{% unless forloop.last %},{% endunless %}{% endfor %}
-    ]
-  }
-  </script>
-
-  <!-- Scripts -->
-  <script>
-    // Year
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // Mobile nav toggle
-    const burger = document.getElementById('navBurger');
-    const navLinks = document.getElementById('navLinks');
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('is-open');
-      burger.classList.toggle('is-active');
-    });
-    navLinks.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('is-open');
-        burger.classList.remove('is-active');
-      });
-    });
-
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('topnav');
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          const offset = 58;
-          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      });
-    });
-
-    // Active nav link on scroll
-    const sections = document.querySelectorAll('section[id], div[id="about"]');
-    const navItems = document.querySelectorAll('.nav-link[href^="#"]');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(s => {
-        if (window.scrollY >= s.offsetTop - 100) current = s.id;
-      });
-      navItems.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-      });
-    });
   </script>
 
 </body>

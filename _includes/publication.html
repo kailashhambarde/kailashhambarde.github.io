@@ -1,0 +1,48 @@
+{% assign paper_href = pub.project_page | default: "" %}
+{% assign skip_paper = false %}
+{% if pub.arxiv and pub.arxiv != "" and pub.arxiv != "0000.00000" and paper_href contains "arxiv.org/abs/" %}
+  {% assign skip_paper = true %}
+{% endif %}
+<div class="pub{% if include.highlight_selected == true or include.highlight_selected == 'true' %}{% if pub.selected %} selected{% endif %}{% endif %}">
+  {% if pub.image %}
+  <div class="pub-visual">
+    <img src="{{ '/images/' | append: pub.image | relative_url }}" alt="">
+  </div>
+  {% endif %}
+  <div class="publication">
+    <div class="papertitle">{{ pub.title }}</div>
+    <div class="authors">
+      {% for key in pub.authors %}
+      {% assign author = site.data.authors[key] %}
+      {% if author %}
+      {% capture full_name %}{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}{% endcapture %}
+      {% if author.is_me %}<span class="author me">{{ full_name }}</span>{% else %}<span class="author">{{ full_name }}</span>{% endif %}{% unless forloop.last %}, {% endunless %}
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% if pub.venue %}
+    <div class="pub-venue">{{ pub.venue }}</div>
+    {% endif %}
+    <div class="pub-links">
+      {% unless skip_paper or paper_href == "" %}
+        {% if paper_href contains "doi.org" %}
+        <a href="{{ paper_href }}" target="_blank" rel="noopener">[DOI]</a>
+        {% elsif paper_href contains ".pdf" or paper_href contains "stamp.jsp" %}
+        <a href="{{ paper_href }}" target="_blank" rel="noopener">[PDF]</a>
+        {% else %}
+        <a href="{{ paper_href }}" target="_blank" rel="noopener">[paper]</a>
+        {% endif %}
+      {% endunless %}
+      {% if pub.arxiv and pub.arxiv != "" and pub.arxiv != "0000.00000" %}
+        {% if pub.arxiv contains "http" %}
+        <a href="{{ pub.arxiv }}" target="_blank" rel="noopener">[arXiv]</a>
+        {% else %}
+        <a href="https://arxiv.org/abs/{{ pub.arxiv }}" target="_blank" rel="noopener">[arXiv]</a>
+        {% endif %}
+      {% endif %}
+      {% if pub.github and pub.github != "" %}
+      <a href="https://github.com/{{ pub.github }}" target="_blank" rel="noopener">[code]</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

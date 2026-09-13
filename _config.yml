@@ -2,6 +2,9 @@
 title: Kailash A. Hambarde
 name: Kailash A. Hambarde
 position: Researcher
+tagline: >-
+  Computer Vision Researcher & Lecturer · Instituto de Telecomunicações (IT)
+  & University of Beira Interior (UBI), Portugal
 affiliation: Instituto de Telecomunicações & University of Beira Interior
 email: kailash.hambarde@ubi.pt
 description: >-
@@ -34,8 +37,9 @@ cienciavitae: ""
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
 
 exclude:
   - .bundle

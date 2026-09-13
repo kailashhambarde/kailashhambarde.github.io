@@ -1,0 +1,12 @@
+# ============================================================
+# TEACHING
+# Lecture courses. The homepage shows this section when it
+# contains at least one entry.
+#
+# Fields: course, role, institution, programme (optional), dates (optional).
+# ============================================================
+
+- course: "Laboratórios de Programação"
+  role: "Lecturer"
+  institution: "Universidade da Beira Interior"
+  programme: "Engenharia Informática"

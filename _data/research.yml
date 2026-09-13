@@ -1,0 +1,45 @@
+# ============================================================
+# RESEARCH OVERVIEW
+# Cards shown in the "Research Overview" section.
+# Each cluster: title, icon (FontAwesome class), summary, topics (bullets),
+# optional links [{text, url}].
+# ============================================================
+
+- title: "Person Re-Identification & Biometrics"
+  icon: "fas fa-user-lock"
+  summary: >-
+    Designing recognition systems that keep working at large scale, long range,
+    and across camera domains.
+  topics:
+    - "Long-range and extreme far-distance person identification (DetReIDX, VReID-XFD)"
+    - "Aerial-ground video-based ReID (AG-VPReID 2025 challenge results)"
+    - "Cross-view, cross-domain and video-based ReID"
+  links:
+    - text: "VReID-XFD Workshop @ WACV 2026"
+      url: "https://www.it.ubi.pt//VReID-XFD/#intro/"
+
+- title: "Robust Vision Under Unconstrained Conditions"
+  icon: "fas fa-eye"
+  summary: >-
+    Understanding and mitigating the covariates that break recognition systems
+    in real, unconstrained environments.
+  topics:
+    - "Domain generalization for gender recognition in unseen environments"
+    - "Causality and 'in-the-wild' video-based ReID"
+    - "Human Re-ID with large vision-language models (LVLMs)"
+  links:
+    - text: "Human Re-ID meets LVLMs"
+      url: "https://arxiv.org/abs/2501.18698"
+
+- title: "Applied ML, NLP & Data Science"
+  icon: "fas fa-robot"
+  summary: >-
+    Transferring research into practical systems — from smart manufacturing to
+    healthcare document processing.
+  topics:
+    - "Automated fabric defect detection (industry prototype, PRR funded)"
+    - "Information retrieval and NLP for clinical trial documents"
+    - "Quantum graph neural networks, detection and biometric fusion"
+  links:
+    - text: "Quantum semi-supervised learning"
+      url: "https://arxiv.org/abs/2408.05498"

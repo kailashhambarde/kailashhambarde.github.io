@@ -1,0 +1,35 @@
+# ============================================================
+# RESEARCH FUNDING & PROJECTS
+# Each item: project, role, optional funder, dates, description.
+# Rendered in the "Research Funding & Projects" section.
+# ============================================================
+
+- project: "Biometric Recognition at Extreme Ranges"
+  role: "Project Coordinator"
+  dates: "2023 – 2025"
+  description: >-
+    Coordinated research on long-range human recognition in collaboration with 6 international
+    universities, leading to the DetReIDX dataset and the VReID-XFD workshop at WACV 2026.
+
+- project: "Automated Fabric Defect Detection Prototype"
+  role: "Researcher / Project Management"
+  funder: "Portugal Recovery and Resilience Plan (PRR)"
+  dates: "2023 – 2025"
+  description: >-
+    Contributed to project management and developed a computer-vision prototype for automated
+    fabric defect detection with a Portuguese textile company.
+
+- project: "NLP for Clinical Trial Document Analysis"
+  role: "Researcher"
+  funder: "FEDER · Fundo de Coesão · Fundo Social Europeu (Portugal 2020)"
+  dates: "2022 – 2023"
+  description: >-
+    Developed NLP models to process and extract relevant information from clinical trial documents.
+
+- project: "Crime Hotspot Detection & Visualisation in Nanded City"
+  role: "Project Fellow"
+  funder: "Government of Maharashtra (INR 108,000)"
+  dates: "2015 – 2017"
+  description: >-
+    Identified crime hotspots using historical FIR data, Random Forest and GIS tools, producing
+    heatmaps and recommendations for police resource allocation.

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body { font-family: "Noto Sans", sans-serif; }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -106,27 +107,55 @@ a:hover { color: #1e40af; text-decoration: underline; }
 
 .news-body { color: #374151; line-height: 1.55; }
 
-.blog-preview-list, .blog-index { display: flex; flex-direction: column; gap: 0; }
+.blog-preview-list { display: flex; flex-direction: column; gap: 0; }
 
-.blog-preview, .blog-index-item { padding: 0.9rem 0; border-bottom: 1px solid #e5e7eb; }
+.blog-preview { padding: 1rem 0; border-bottom: 1px solid #e5e7eb; }
 
-.blog-preview:last-child, .blog-index-item:last-child { border-bottom: none; }
+.blog-preview:last-child { border-bottom: none; }
 
-.blog-preview h2, .blog-preview h3, .blog-index-item h2, .blog-index-item h3 { font-size: 0.95rem; font-weight: 700; line-height: 1.4; margin: 0 0 0.25rem; color: #111827; }
+.blog-preview h3 { font-size: 0.97rem; font-weight: 700; line-height: 1.4; margin: 0 0 0.25rem; color: #111827; }
 
-.blog-preview h2 a, .blog-preview h3 a, .blog-index-item h2 a, .blog-index-item h3 a { color: #111827; }
+.blog-preview h3 a { color: #111827; }
 
-.blog-preview h2 a:hover, .blog-preview h3 a:hover, .blog-index-item h2 a:hover, .blog-index-item h3 a:hover { color: #2563eb; text-decoration: none; }
+.blog-preview h3 a:hover { color: #2563eb; text-decoration: none; }
 
-.blog-preview p, .blog-index-item p { font-size: 0.85rem; color: #4b5563; line-height: 1.6; margin: 0.2rem 0 0.45rem; }
+.blog-preview p { font-size: 0.855rem; color: #4b5563; line-height: 1.65; margin: 0.2rem 0 0.5rem; }
 
-.blog-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; color: #9ca3af; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.25rem; }
+.blog-index { display: flex; flex-direction: column; gap: 0; }
 
-.blog-meta span::before { content: ''; display: inline-block; width: 4px; height: 4px; margin-right: 0.45rem; border-radius: 50%; background: #e5e7eb; vertical-align: middle; }
+.blog-index-item { padding: 1.4rem 1.1rem; border-radius: 8px; border: 1px solid #e5e7eb; margin-bottom: 0.75rem; background: #ffffff; transition: box-shadow 0.18s, border-color 0.18s, transform 0.18s; }
 
-.tag-list { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.blog-index-item:last-child { margin-bottom: 0; }
 
-.tag-list span { display: inline-flex; align-items: center; min-height: 22px; padding: 0.1rem 0.5rem; border-radius: 20px; background: #f9fafb; border: 1px solid #e5e7eb; color: #4b5563; font-size: 0.7rem; font-weight: 600; }
+.blog-index-item:hover { border-color: #ced2d9; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07); transform: translateY(-1px); }
+
+.blog-index-item h2 { font-family: 'Lora', Georgia, serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; margin: 0 0 0.4rem; color: #111827; }
+
+.blog-index-item h2 a { color: #111827; }
+
+.blog-index-item h2 a:hover { color: #2563eb; text-decoration: none; }
+
+.blog-index-item p { font-size: 0.875rem; color: #4b5563; line-height: 1.7; margin: 0.25rem 0 0.6rem; }
+
+.blog-read-more { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.8rem; font-weight: 600; color: #2563eb; margin-top: 0.2rem; }
+
+.blog-read-more:hover { color: #1e40af; text-decoration: none; gap: 0.5rem; }
+
+.blog-view-all { margin-top: 1rem; text-align: right; }
+
+.blog-view-all a { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 600; color: #4b5563; padding: 0.4rem 0.9rem; border: 1px solid #e5e7eb; border-radius: 6px; background: #ffffff; transition: all 0.15s; }
+
+.blog-view-all a:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; text-decoration: none; }
+
+.blog-post-count { font-size: 0.78rem; color: #9ca3af; font-weight: 600; margin-bottom: 1.1rem; }
+
+.blog-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; color: #9ca3af; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.3rem; }
+
+.blog-meta span::before { content: '·'; margin-right: 0.3rem; color: #e5e7eb; }
+
+.tag-list { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
+
+.tag-list span { display: inline-flex; align-items: center; min-height: 22px; padding: 0.1rem 0.55rem; border-radius: 20px; background: #eff6ff; border: 1px solid rgba(37, 99, 235, 0.15); color: #1e40af; font-size: 0.69rem; font-weight: 600; letter-spacing: 0.01em; }
 
 .page-shell { padding: 6rem 1.5rem 3rem; min-height: calc(100vh - 92px); }
 

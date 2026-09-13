@@ -1,0 +1,54 @@
+# ============================================================
+# ACADEMIC SERVICE
+# peer_review   -> journals & conferences you review for
+# committees    -> organising / program committees
+# invited_talks -> invited talks & seminars
+# ============================================================
+
+peer_review:
+  journals:
+    - name: "IEEE Transactions on Biometrics, Behavior, and Identity Science (IEEE-TBIOM)"
+      url: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8423754"
+    - name: "ACM Transactions on Asian and Low-Resource Language Information Processing (ACM TALLIP)"
+      url: "https://dl.acm.org/journal/tallip"
+  conferences:
+    - name: "IJCB 2023 — IEEE International Joint Conference on Biometrics"
+      url: "https://ijcb2023.ieee-biometrics.org/"
+    - name: "IJCB 2024 — IEEE International Joint Conference on Biometrics"
+      url: "https://ijcb2024.ieee-biometrics.org/"
+    - name: "IJCB 2025 — IEEE International Joint Conference on Biometrics"
+      url: "https://ijcb2025.ieee-biometrics.org/"
+
+committees:
+  - role: "Guest Editor"
+    event: "IEEE T-BIOM Special Issue on Human Recognition in Aerial Surveillance"
+    dates: "2026–2027"
+    url: "https://ieee.atyponrex.com/journal/tbiom"
+    description: >-
+      Call for papers: submission deadline 15 December 2026; targeted publication Q4 2027.
+      Open submissions and substantially extended versions of AERO-HPR (CVPR 2026) and VReID-XFD (WACV 2026) papers.
+      Submit via the T-BIOM portal, article type AERO-HPR.
+  - role: "Organising Committee Member (Secondary Contact & Co-organiser)"
+    event: "1st Workshop on Video-based Human Recognition at Extreme Far Distances (VReID-XFD) @ WACV 2026"
+    dates: "Mar 2026"
+    url: "https://www.it.ubi.pt//VReID-XFD/#intro/"
+    description: >-
+      Responsible for coordination of the DetReIDX Challenge, reviewer engagement, and communication management.
+  - role: "Program Committee Member"
+    event: "2nd International Conference on AI-Generated Content (AIGC 2024)"
+    dates: "Dec 2024"
+    url: "https://drive.google.com/file/d/1otKf8X4wwjm3WdgKaYIzeOVM8PJ_RnMP/view?usp=sharing"
+    description: "Beijing, China."
+
+invited_talks:
+  - title: "ReID Meets LVLMs (ChatGPT-4o, Gemini-2.0, Claude 3.5 Sonnet, Qwen-VL-Max)"
+    event: "ATAL Online Faculty Development Programme on AI/ML for Healthcare and IoT · School of Computational Sciences, SRTM University"
+    dates: "Jan 2025"
+    url: "https://drive.google.com/file/d/1zO0bmFkSyOY90dMzeB5JwX40V5KRliGb/view?usp=sharing"
+  - title: "Plenary Talk — Recent Trends in Pure and Applied Sciences"
+    event: "ICRTPAS-23 · Rajarambapu Institute of Technology, Sangli, India"
+    dates: "Mar 2023"
+    url: "https://drive.google.com/file/d/14wioTKU_IXMnoebkWXSTyBtKj946FmQ-/view?usp=sharing"
+  - title: "Guest Talk — Role of Data Science in Mathematical Problem Solving"
+    event: "National Mathematics Day 2022 · Dept. of Mathematics, Late Pushpadevi Patil College, Risod, India"
+    dates: "Dec 2022"
