@@ -1,4 +1,24 @@
 # ---- 2026 ----
+- id: hybridmobilenetvitcxr
+  year: 2026
+  title: "Hybrid MobileNetV2–vision transformer approach for multi-label classification of chest X-rays"
+  venue: "Scientific Reports, 2026"
+  description: "A hybrid MobileNetV2 and Vision Transformer model for multi-label classification of chest X-ray images."
+  project_page: https://doi.org/10.1038/s41598-026-68788-w
+  arxiv:
+  image:
+  authors:
+    - rakeshsraj
+    - mppavankumar
+    - knmanjunath
+    - berangaswamy
+    - hsnagendraswamy
+    - cblavanya
+    - kailashhambarde
+    - mvarsha
+  awards:
+    - "Journal Paper"
+
 - id: vreidxfd
   year: 2026
   selected: true
