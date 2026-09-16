@@ -20,6 +20,13 @@ peer_review:
       url: "https://ijcb2025.ieee-biometrics.org/"
 
 committees:
+  - role: "Member of the Academic Advisory Board"
+    event: "Department of Business Administration and Artificial Intelligence, İstanbul Medipol University"
+    dates: "Sep 2026 – Present"
+    url: "https://www.medipol.edu.tr/en/academics/undergraduate-schools/medipol-business-school/departments/business-administration-and-artificial-intelligence-english"
+    description: >-
+      Academic Advisory Board of the Department of Business Administration and Artificial Intelligence
+      at the Faculty of Business and Management Sciences.
   - role: "Guest Editor"
     event: "IEEE T-BIOM Special Issue on Human Recognition in Aerial Surveillance"
     dates: "2026–2027"
