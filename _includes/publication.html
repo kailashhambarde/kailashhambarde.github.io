@@ -6,7 +6,7 @@
 <div class="pub{% if include.highlight_selected == true or include.highlight_selected == 'true' %}{% if pub.selected %} selected{% endif %}{% endif %}">
   {% if pub.image %}
   <div class="pub-visual">
-    <img src="{{ '/images/' | append: pub.image | relative_url }}" alt="">
+    <img src="{{ '/images/' | append: pub.image | relative_url }}" alt="{{ pub.title }}">
   </div>
   {% endif %}
   <div class="publication">

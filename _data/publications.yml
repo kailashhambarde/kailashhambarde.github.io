@@ -43,7 +43,7 @@
   description: "NTIRE 2026 image denoising challenge report (noise level σ=50), covering methods and results from participating teams."
   project_page:
   arxiv: 2606.16031
-  image:
+  image: cvpr2026.png
   authors:
     - kailashhambarde
     - hugo
@@ -57,7 +57,7 @@
   description: "NTIRE 2026 single-image shadow removal challenge report, covering methods and results from participating teams."
   project_page:
   arxiv:
-  image:
+  image: cvpr2026.png
   authors:
     - kailashhambarde
   awards:
@@ -71,7 +71,7 @@
   description: "Introduces Real Audio–Real Video with Semantic Mismatch (RARV-SMM) as a fifth class for audio-visual DeepFake detection, showing that current models fail when authentic modalities are semantically inconsistent."
   project_page:
   arxiv: 2604.28022
-  image:
+  image: deepfakesmismatch.png
   authors:
     - sharayudeshmukh
     - kailashhambarde

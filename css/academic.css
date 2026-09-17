@@ -221,15 +221,16 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 .pub-visual {
-  flex: 0 0 140px;
-  width: 140px;
+  flex: 0 0 160px;
+  width: 160px;
+  height: 100px;
 }
 .pub-visual img {
   display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  width: 160px;
+  height: 100px;
   object-fit: cover;
+  object-position: center;
   border: 1px solid var(--line);
 }
 
@@ -331,7 +332,7 @@ ul { margin: 0; padding: 0; list-style: none; }
     margin-left: -8px;
     margin-right: -8px;
   }
-  .pub-visual { width: 100%; max-width: 240px; }
+  .pub-visual { width: 160px; max-width: 160px; height: 100px; }
 
   .news-item {
     grid-template-columns: 1fr;
