@@ -1,4 +1,19 @@
 # ---- 2026 ----
+- id: georeid
+  year: 2026
+  selected: true
+  title: "Rectifying Geometry-Induced Similarity Distortions for Real-World Aerial-Ground Person Re-Identification"
+  venue: "IEEE Transactions on Information Forensics and Security, 2026"
+  description: "A geometry-aware framework that rectifies aerial-ground similarity distortions for robust real-world person re-identification."
+  project_page:
+  arxiv: 2601.21405
+  image: georeid.png
+  authors:
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+
 - id: hybridmobilenetvitcxr
   year: 2026
   title: "Hybrid MobileNetV2–vision transformer approach for multi-label classification of chest X-rays"
