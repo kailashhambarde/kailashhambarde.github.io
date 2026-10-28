@@ -1,4 +1,19 @@
 # ---- 2026 ----
+- id: adp-fewshot-detection
+  year: 2026
+  title: "ADP: Adaptive Discriminative Prototypes for Cross-Domain Few-Shot Object Detection"
+  venue: "Electronics, 15(21), 4991, 2026"
+  description: "An adaptive discriminative prototype method for cross-domain few-shot object detection."
+  project_page: https://doi.org/10.3390/electronics15214991
+  arxiv:
+  image: adp-fewshot-detection.png
+  authors:
+    - saniyadeshkmukh
+    - kailashhambarde
+    - hugo
+  awards:
+    - "Journal Paper"
+
 - id: georeid
   year: 2026
   selected: true
